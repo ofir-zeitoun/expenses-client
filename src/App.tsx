@@ -33,6 +33,16 @@ function App() {
       <div>
         <img src={ozLogo} className="logo" alt="Ofir Zeitoun" />
         <img src={mernLogo} className="logo react" alt="MERN" />
+        
+        {/* for debug only, TODO: ExpensesList component */}
+        {expenses.map((expense) => (
+        <div key={expense._id}>
+          <p>Name: {expense.name}</p>
+          <p>Amount: {expense.amount}</p>
+          <p>Cause: {expense.cause}</p>
+          <hr />
+        </div>
+        ))}
       </div>
     </>
   );
