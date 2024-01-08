@@ -1,8 +1,33 @@
+import { useEffect, useState } from 'react';
+import fetchExpenses from './api/api.js';
 import mernLogo from "./assets/oz-mern.png";
 import ozLogo from "/oz.png";
 import "./App.css";
 
 function App() {
+  type Expense = {
+    _id: string;
+    name: string;
+    amount: number;
+    cause: string;
+  };
+  
+  const [expenses, setExpenses] = useState<Expense[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchExpenses();
+        console.log(data);
+        setExpenses(data);
+      } catch (error) {
+        console.error('Error fetching expenses:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+
   return (
     <>
       <div>
