@@ -3,15 +3,9 @@ import fetchExpenses from './api/api.js';
 import mernLogo from "./assets/oz-mern.png";
 import ozLogo from "/oz.png";
 import "./App.css";
+import { Expense } from './expense.js';
 
 function App() {
-  type Expense = {
-    _id: string;
-    name: string;
-    amount: number;
-    cause: string;
-  };
-  
   const [expenses, setExpenses] = useState<Expense[]>([]);
 
   useEffect(() => {
