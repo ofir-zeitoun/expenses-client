@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 
 export interface IExpenses {
   _id: string;
@@ -9,15 +8,22 @@ export interface IExpenses {
   date: string;
 }
 
-const fetchExpenses  = (): Promise<IExpenses[]>  => axios.get("/api/expanses").then((response) => response.data);
+const fetchExpenses = (): Promise<IExpenses[]> =>
+  fetch(`${import.meta.env.VITE_BASE_URL}/api/expanses`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => data as IExpenses[]);
 
 const Expenses = () => {
- 
- const {data: expenses } = useQuery({
-   queryKey: ["expenses"] ,
-   queryFn: fetchExpenses ,
+  const { data: expenses } = useQuery({
+    queryKey: ["expenses"],
+    queryFn: fetchExpenses,
   });
-  
+
   return (
     <div>
       expenses
