@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import fetchExpenses from "../../api/expensesApi";
+import fetchExpenses from "./fetch-expenses";
 
 const Expenses = () => {
   const { data: expenses } = useQuery({
