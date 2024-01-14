@@ -1,7 +1,8 @@
-import { Expense } from "../@types/expense";
+import { Expense } from "../../@types/expense";
+import { apiFetch } from "../../api";
 
 const fetchExpenses = (): Promise<Expense[]> =>
-  fetch(`${import.meta.env.VITE_BASE_URL}/api/expanses`)
+  apiFetch("/api/expanses")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -10,4 +11,4 @@ const fetchExpenses = (): Promise<Expense[]> =>
     })
     .then((data) => data as Expense[]);
 
-    export default fetchExpenses;
+export default fetchExpenses;
