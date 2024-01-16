@@ -1,0 +1,76 @@
+.expense-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    background: var(--Shades-White, #FFF);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .expense-item-name {
+    display: none;
+    color: #191D23;
+    font-family: 'Manrope', sans-serif; 
+  }
+
+  .expense-item-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: url('<path-to-image>'), lightgray 50% / cover no-repeat;
+    margin-right: 10px; 
+  }
+
+  @media (min-width: 768px) {
+    .expense-item-name {
+      display: block;
+    }
+  }
+
+  .expense-item-cause {
+    width: 243px;        
+    height: 22px;        
+    margin-bottom: 16px; 
+    font-family: 'Manrope', sans-serif; 
+    font-size: 16px;
+    font-weight: 600;    
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #191D23;
+  }
+  
+  .expense-item-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    padding: 8px;
+    border-radius: 100px;
+    background: var(--Neutral-50, #F7F8F9);
+    margin-left: 10px;
+  }
+
+  .expense-item-date {
+    width: 198px;
+    height: 19px;
+    margin-bottom: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #64748B;
+  }
+  
+  
+  .expense-item-amount span {
+    color: #000;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
