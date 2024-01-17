@@ -1,24 +1,7 @@
 import { Expense } from "../../@types/expense";
+import { formatDateAndTime } from "./date-format";
 
-const formatDateAndTime = (dateString: string | number | Date) => {
-  const date = new Date(dateString);
-
-  const day = date.getDate();
-  const month = date.getMonth() + 1;
-  const year = date.getFullYear();
-
-  const formattedDate = `${day}.${month}.${year}`;
-
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")}`;
-
-  return `${formattedDate} ${formattedTime}`;
-};
-
-const ExpenseItem = ({ item }: { item: Expense }) => {
+export const ExpenseItem = ({ item }: { item: Expense }) => {
   return (
     <div className="expense-item">
       <h3 className="expense-item-name">{item.name}</h3>
@@ -33,5 +16,3 @@ const ExpenseItem = ({ item }: { item: Expense }) => {
     </div>
   );
 };
-
-export default ExpenseItem;

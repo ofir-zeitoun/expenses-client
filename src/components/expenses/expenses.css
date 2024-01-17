@@ -4,7 +4,7 @@
   gap: 0.625rem;
   padding: 0.5rem;
   border-radius: 0.625rem;
-  background: var(--Shades-White, #fff);
+  background: #fff;
   border: 0.0625rem solid #ccc;
   box-sizing: border-box;
 }
