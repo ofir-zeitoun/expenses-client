@@ -1,0 +1,117 @@
+.newExpanse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+
+}
+
+.title{
+  font-weight: bold;
+}
+
+.expenses-input {
+  flex: 1 0 0;
+  color: var(--Neutral-800, #191D23);
+
+  padding: 5px;
+  margin-right: 10px;
+
+
+}::placeholder {
+  color: var(--Neutral-800, #191D23);
+
+}
+.total-input {
+  flex: 1 0 0;
+  color: var(--Neutral-800, #191D23);
+  padding: 5px;
+  margin-right: 10px;
+
+}::placeholder {
+  color: var(--Neutral-800, #191D23);
+
+}
+
+.header-slider {
+  display: flex;
+  align-items: center;
+
+  width: 160px;
+  height: 25px;
+  padding: 0px 3px 0px 24px;
+  justify-content: center;
+  align-items: center;
+  
+  border-radius: 4px;
+  background: var(--Shades-White, #FFF);
+
+}
+
+
+
+.btn-add {
+  color: var(--Shades-White, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.084px;
+  padding: 5px, 9px, 5px, 9px;
+  border-radius: 4px;
+  background: var(--Success-Green-700, #047857);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 1000; 
+}
+
+.popup {
+
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 300px;
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  /* margin-top: 120px; */
+}
+
+.btn-close {
+  color: var(--Shades-White, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Manrope;
+  margin-left: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.084px;
+  padding: 5px, 9px, 5px, 9px;
+  border-radius: 4px;
+  background: red;
+}
