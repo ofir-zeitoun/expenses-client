@@ -7,5 +7,5 @@ export const formatDateAndTime = (
   if (!isValid(date)) {
     return "";
   }
-  return format(date, "d.M.yyyy HH:mm");
+  return format(date, "dd/MM/yyyy HH:mm");
 };
