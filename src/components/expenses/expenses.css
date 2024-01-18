@@ -1,0 +1,86 @@
+.expense-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem;
+  border-radius: 0.625rem;
+  background: #fff;
+  border: 0.0625rem solid #ccc;
+  box-sizing: border-box;
+}
+
+.expense-item-name {
+  display: none;
+  color: #191d23;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .expense-item-name {
+    display: block;
+  }
+}
+
+.expense-item-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: url("<path-to-image>"), lightgray 50% / cover no-repeat;
+  margin-right: 0.625rem;
+}
+
+.expense-item-cause {
+  width: 15.1875rem;
+  height: 1.375rem;
+  margin-bottom: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #191d23;
+}
+
+.expense-item-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.3125rem;
+  padding: 0.5rem;
+  border-radius: 6.25rem;
+  background: #f7f8f9;
+  margin-left: 0.625rem;
+}
+
+.expense-item-date {
+  width: 12.375rem;
+  height: 1.1875rem;
+  margin-bottom: 1rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.1875rem;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #64748b;
+}
+
+.expense-item-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.3125rem;
+  padding: 0.5rem;
+  border-radius: 6.25rem;
+  background: #f7f8f9;
+  margin-left: 0.625rem;
+}
+
+.expense-item-amount span {
+  color: #000;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
