@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './new-expense.css';
 import postExpenses from './fetch-new-expense';
-// import { formatDateAndTime } from "../utilities/date-format";
 interface NewExpenseProps {
   onClose: () => void;
   refreshExpenses: () => void;

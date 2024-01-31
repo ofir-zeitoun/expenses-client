@@ -3,55 +3,49 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-
-
 }
 
-.title{
+.title {
   font-weight: bold;
 }
-.popup .title{
+
+.popup .title {
   font-size: 18px;
 }
+
 .expenses-input {
   flex: 1 0 0;
   color: var(--Neutral-800, #191D23);
-
   padding: 5px;
   margin-right: 10px;
-
-
-}::placeholder {
-  color: var(--Neutral-800, #191D23);
-
 }
+
+::placeholder {
+  color: var(--Neutral-800, #191D23);
+}
+
 .total-input {
   flex: 1 0 0;
   color: var(--Neutral-800, #191D23);
   padding: 5px;
   margin-right: 10px;
+}
 
-}::placeholder {
+::placeholder {
   color: var(--Neutral-800, #191D23);
-
 }
 
 .header-slider {
   display: flex;
   align-items: center;
-
   width: 160px;
   height: 25px;
   padding: 0px 3px 0px 24px;
   justify-content: center;
   align-items: center;
-  
   border-radius: 4px;
   background: var(--Shades-White, #FFF);
-
 }
-
-
 
 .btn-add {
   color: var(--Shades-White, #FFF);
@@ -82,23 +76,18 @@
 }
 
 .popup {
-
   position: absolute;
   top: 20%;
-
-
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   min-width: 300px;
- 
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  /* margin-top: 120px; */
 }
 
 .btn-close {
@@ -117,30 +106,26 @@
   background: red;
 }
 
-
 .form-group {
   position: relative;
-  /* margin-bottom: 20px; */
 }
 
 .expense-label {
   position: absolute;
   left: 10px;
-  top: 15px; /* Adjusted for initial position */
+  top: 15px;
   color: #1e1010;
   transition: all 0.3s ease;
-  /*background-color: white; /* Ensure label background matches popup */
-  padding: 0 4px; /* Add padding to label for background */
-  transform: translate(0, -50%); /* Center label vertically */
-  pointer-events: none; /* Ensure clicks pass through to input */
+  padding: 0 4px;
+  transform: translate(0, -50%);
+  pointer-events: none;
 }
-
 
 .expenses-input:focus + .expense-label,
 .total-input:focus + .expense-label,
 .expenses-input:not(:placeholder-shown) + .expense-label,
 .total-input:not(:placeholder-shown) + .expense-label {
-  top: -12px; /* Adjusted for floating position */
+  top: -12px;
   font-size: 12px;
   color: #333;
 }
