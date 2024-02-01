@@ -3,46 +3,46 @@
 
 # Expanses Client
 
-# React + TypeScript + Vite
+## React + TypeScript + Vite
 
-```markdown
-# Table of Contents
-1. [Links](#links)
-2. [About the Project](#about-the-project)
-3. [Project Description](#project-description)
-   - [Registration/Login Page](#registrationlogin-page)
-   - [Expense Management Dashboard](#expense-management-dashboard)
-4. [Installation and Setup](#installation-and-setup)
-5. [Running the Application](#running-the-application)
-6. [Key Features](#key-features)
-7. [Technologies Used](#technologies-used)
-8. [Future Implementation](#future-implementation)
-9. [Project Status](#project-status)
-10. [Contributing](#contributing)
-11. [License](#license)
-```
+### Table of Contents
+- [Expanses Client](#expanses-client)
+  - [React + TypeScript + Vite](#react--typescript--vite)
+    - [Table of Contents](#table-of-contents)
+    - [Links](#links)
+    - [About the Project](#about-the-project)
+    - [Project Description](#project-description)
+      - [Registration/Login Page](#registrationlogin-page)
+      - [Expense Management Dashboard](#expense-management-dashboard)
+    - [Installation and Setup](#installation-and-setup)
+    - [Running the Application](#running-the-application)
+    - [Key Features](#key-features)
+    - [Technologies Used](#technologies-used)
+    - [Future Implementation](#future-implementation)
+    - [Project Status](#project-status)
+    - [License](#license)
 
-## Links
+### Links
 - **Project Board**: [GitHub Project](https://github.com/users/ofir-zeitoun/projects/2)
 - **Frontend Repository**: [Expanses Client](https://github.com/ofir-zeitoun/expanses-client)
 - **Backend Repository**: [Expanses Server](https://github.com/ofir-zeitoun/expanses-server)
 - **Design (Figma)**: [Figma Design](https://www.figma.com/file/QaLtJUErrNqG1TWroa8xUa/Untitled?type=design&node-id=2-1353&mode=design&t=K6H7aqa675qbkX7G-0)
 
-## About the Project
-Developed by various developers, Expanses Client is part of a MERN stack application and utilizes modern technologies and methodologies, such as TypeScript, React, Vite.js, and comprehensive validation and unit testing, to ensure a high-quality, scalable solution. The project is designed to offer a user-centric experience for managing expenses, focusing on intuitive navigation and interactive features
+### About the Project
+Expanses Client is developed by a team of developers and is part of a MERN stack application. It utilizes modern technologies and methodologies such as TypeScript, React, Vite.js, and includes comprehensive validation and unit testing to ensure a high-quality, scalable solution. The project focuses on providing a user-centric experience for managing expenses, with intuitive navigation and interactive features.
 
-## Project Description
-Expanses Client provides a comprehensive interface for users to manage personal or business expenses. It is tailored to present essential functionalities in an accessible and efficient manner.
+### Project Description
+Expanses Client offers a comprehensive interface for users to manage personal or business expenses, designed for accessibility and efficiency.
 
-### Registration/Login Page
-- **User-Friendly Access**: Offers simple and secure registration or login options, including email/password and social media integrations.
+#### Registration/Login Page
+- **User-Friendly Access**: Provides simple and secure registration or login options, including email/password and social media integrations.
 
-### Expense Management Dashboard
-- **Comprehensive Expense Overview**: Users can view and manage not only their own expenses but also see expenses logged by other users, providing a holistic view of all expenses within the system.
-- **Interactive Features**: Users can easily add new expenses or delete existing ones, all within a user-friendly interface.
+#### Expense Management Dashboard
+- **Comprehensive Expense Overview**: Enables users to view and manage their expenses, as well as those logged by others, offering a complete view of all system expenses.
+- **Interactive Features**: Facilitates easy addition and deletion of expenses through a user-friendly interface.
 
-## Installation and Setup
-To set up the project locally:
+### Installation and Setup
+To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
@@ -52,40 +52,40 @@ To set up the project locally:
    ```bash
    cd expanses-client
    ```
-3. Install the dependencies:
+3. Install dependencies:
    ```bash
    npm install
    ```
-4. Create a .env file in the root directory of the project and add the necessary environment variables for connection settings and other important configurations.
-## Running the Application
-Start the application with the following command:
+4. Create a `.env` file in the root directory and add necessary environment variables for connections and configurations.
+
+### Running the Application
+To start the application, use the command:
 ```bash
 npm run dev
 ```
 
-## Key Features
-- Intuitive and user-friendly interface for expense management.
-- Real-time interaction with backend services for comprehensive data handling.
+### Key Features
+- Intuitive interface for managing expenses.
+- Real-time backend interaction for comprehensive data management.
 - Modern, responsive UI/UX design.
 
-## Technologies Used
-- React (React Hooks and Components)
+### Technologies Used
+- React (Hooks and Components)
 - TypeScript for type safety
-- Vite.js for efficient frontend tooling
-- ESLint for code quality assurance
-- React Query for managing server state
+- Vite.js for frontend efficiency
+- ESLint for code quality
+- React Query for server state management
 
-## Future Implementation
-- Management of multiple expense lists concurrently.
-- Enhanced filtering and sorting capabilities for expense viewing and list management.
-- Advanced filtering and sorting options to allow users to customize the display of expenses and lists according to their preferences.
-- Unit testing to ensure code reliability
+### Future Implementation
+- Concurrent management of multiple expense lists.
+- Enhanced expense filtering and sorting for better list management.
+- Advanced customization options for expense display.
+- Unit testing for code reliability.
 
-## Project Status
-- The project is currently in active development. New features and improvements are being added regularly.
+### Project Status
+The project is in active development, with regular updates and new features.
 
-
-## License
+### License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/ofir-zeitoun/expanses-client/blob/main/LICENSE) file for details.
 
 ---
