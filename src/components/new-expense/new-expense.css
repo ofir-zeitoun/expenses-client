@@ -1,0 +1,131 @@
+.newExpanse {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.popup .title {
+  font-size: 18px;
+}
+
+.expenses-input {
+  flex: 1 0 0;
+  color: var(--Neutral-800, #191D23);
+  padding: 5px;
+  margin-right: 10px;
+}
+
+::placeholder {
+  color: var(--Neutral-800, #191D23);
+}
+
+.total-input {
+  flex: 1 0 0;
+  color: var(--Neutral-800, #191D23);
+  padding: 5px;
+  margin-right: 10px;
+}
+
+::placeholder {
+  color: var(--Neutral-800, #191D23);
+}
+
+.header-slider {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 25px;
+  padding: 0px 3px 0px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--Shades-White, #FFF);
+}
+
+.btn-add {
+  color: var(--Shades-White, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.084px;
+  padding: 5px, 9px, 5px, 9px;
+  border-radius: 4px;
+  background: var(--Success-Green-700, #047857);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  z-index: 1000; 
+}
+
+.popup {
+  position: absolute;
+  top: 20%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-close {
+  color: var(--Shades-White, #FFF);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Manrope;
+  margin-left: 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.084px;
+  padding: 5px 18px 5px 18px;
+  border-radius: 4px;
+  background: red;
+}
+
+.form-group {
+  position: relative;
+}
+
+.expense-label {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: #1e1010;
+  transition: all 0.3s ease;
+  padding: 0 4px;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+
+.expenses-input:focus + .expense-label,
+.total-input:focus + .expense-label,
+.expenses-input:not(:placeholder-shown) + .expense-label,
+.total-input:not(:placeholder-shown) + .expense-label {
+  top: -12px;
+  font-size: 12px;
+  color: #333;
+}
