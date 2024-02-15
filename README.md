@@ -1,12 +1,12 @@
 
 ---
 
-# Expanses Client
+# Expenses Client
 
 ## React + TypeScript + Vite
 
 ### Table of Contents
-- [Expanses Client](#expanses-client)
+- [Expenses Client](#expenses-client)
   - [React + TypeScript + Vite](#react--typescript--vite)
     - [Table of Contents](#table-of-contents)
     - [Links](#links)
@@ -24,15 +24,15 @@
 
 ### Links
 - **Project Board**: [GitHub Project](https://github.com/users/ofir-zeitoun/projects/2)
-- **Frontend Repository**: [Expanses Client](https://github.com/ofir-zeitoun/expanses-client)
-- **Backend Repository**: [Expanses Server](https://github.com/ofir-zeitoun/expanses-server)
+- **Frontend Repository**: [Expenses Client](https://github.com/ofir-zeitoun/expenses-client)
+- **Backend Repository**: [Expenses Server](https://github.com/ofir-zeitoun/expenses-server)
 - **Design (Figma)**: [Figma Design](https://www.figma.com/file/QaLtJUErrNqG1TWroa8xUa/Untitled?type=design&node-id=2-1353&mode=design&t=K6H7aqa675qbkX7G-0)
 
 ### About the Project
-Expanses Client is developed by a team of developers and is part of a MERN stack application. It utilizes modern technologies and methodologies such as TypeScript, React, Vite.js, and includes comprehensive validation and unit testing to ensure a high-quality, scalable solution. The project focuses on providing a user-centric experience for managing expenses, with intuitive navigation and interactive features.
+Expenses Client is developed by a team of developers and is part of a MERN stack application. It utilizes modern technologies and methodologies such as TypeScript, React, Vite.js, and includes comprehensive validation and unit testing to ensure a high-quality, scalable solution. The project focuses on providing a user-centric experience for managing expenses, with intuitive navigation and interactive features.
 
 ### Project Description
-Expanses Client offers a comprehensive interface for users to manage personal or business expenses, designed for accessibility and efficiency.
+Expenses Client offers a comprehensive interface for users to manage personal or business expenses, designed for accessibility and efficiency.
 
 #### Registration/Login Page
 - **User-Friendly Access**: Provides simple and secure registration or login options, including email/password and social media integrations.
@@ -46,11 +46,11 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ofir-zeitoun/expanses-client.git
+   git clone https://github.com/ofir-zeitoun/expenses-client.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd expanses-client
+   cd expenses-client
    ```
 3. Install dependencies:
    ```bash
@@ -86,6 +86,6 @@ npm run dev
 The project is in active development, with regular updates and new features.
 
 ### License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/ofir-zeitoun/expanses-client/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/ofir-zeitoun/expenses-client/blob/main/LICENSE) file for details.
 
 ---
