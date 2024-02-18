@@ -3,9 +3,9 @@
   align-items: center;
   gap: 0.625rem;
   padding: 0.5rem;
-  border-radius: 0.625rem;
+  /* border-radius: 0.625rem; */
   background: #fff;
-  border: 0.0625rem solid #ccc;
+  border-bottom: 0.0825rem solid #F7F8F9;
   box-sizing: border-box;
 }
 
@@ -83,4 +83,55 @@
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 600;
+}
+
+
+.expense-item-delete-button {
+  background-color: red; 
+  color: white; 
+  border: none; 
+  padding: 5px 10px; 
+  cursor: pointer; 
+}
+
+.expense-item-delete-button:hover {
+  background-color: darkred; 
+}
+
+
+
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-message {
+  margin-bottom: 20px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.popup-button.confirmation {
+  background-color: green;
+  color: white;
+}
+
+.popup-button.cancellation {
+  background-color: red;
+  color: white;
 }
