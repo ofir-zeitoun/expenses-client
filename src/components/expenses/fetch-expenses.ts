@@ -2,7 +2,7 @@ import { Expense } from "../../@types/expense";
 import { apiFetch } from "../../api";
 
 const fetchExpenses = (): Promise<Expense[]> =>
-  apiFetch("/api/expanses")
+  apiFetch("/api/expenses")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
