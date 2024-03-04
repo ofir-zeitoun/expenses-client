@@ -1,0 +1,99 @@
+.nav-bar {
+	box-sizing: border-box;
+	padding: 0px 120px 0px 25px !important;
+	width: 100%;
+	height: 70px;
+	background: #ffffff;
+	box-shadow: 1px 4px 40px #E6EAEF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.left-nav {
+	display: flex;
+	align-items: center;
+	/* Align items vertically in the center */
+}
+
+.right-nav {
+	display: flex;
+	align-items: center;
+	/* Align items vertically in the center */
+}
+
+/* Logo Styles */
+.logo {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	/* font-size: 26px; */
+	line-height: 32px;
+	color: #191919;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	/* Remove underline from NavLink */
+}
+
+.user-photo img {
+	border-radius: 500px;
+	width: 46px;
+	height: 46px;
+	background-image: url(images/ellipse_1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Application Name Styles */
+.app-name {
+	font-family: "Montserrat", sans-serif;
+	/* font-optical-sizing: auto; */
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #456085;
+
+}
+
+/* Auth Action Button Styles */
+.auth-action {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #191919;
+	cursor: pointer;
+}
+
+.auth-action:hover {
+	text-decoration: underline;
+	/* Add underline on hover for logout/login text */
+}
+
+.auth-container {
+	/* box-sizing: border-box;
+	padding: 0 10px; */
+	display: flex;
+	gap: 30px;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.nav-bar {
+		flex-direction: column;
+		height: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.logo,
+	.app-name {
+		margin-bottom: 10px;
+	}
+}

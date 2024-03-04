@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
+#root, body {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+  height: 100%; overflow: hidden
+	/* This ensures that your application can use the full width */
+  }
+
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; */
+
+    /* max-width: 1280px; */ /* Removed to allow full width */
+    margin: 0; /* Updated to remove auto margins */
+    padding: 0; /* Updated to remove padding */
+    text-align: center;
 }
+
+
 
 .logo {
   height: 6em;
@@ -13,4 +28,3 @@
   will-change: filter;
   transition: filter 300ms;
 }
-
