@@ -8,14 +8,19 @@ import { ConnectionHealth } from "./components/connection-health";
 import NavBar from "./components/nav-bar/nav-bar";
 import { useAuth0 } from "@auth0/auth0-react";
 
+
 function App() {
   const { isAuthenticated } = useAuth0();
+
+  
+
+
   return (
     <>
       <QueryWrapper>
       <NavBar />
         <div>
-        
+
           <ConnectionHealth />
           {isAuthenticated ? (
         <>

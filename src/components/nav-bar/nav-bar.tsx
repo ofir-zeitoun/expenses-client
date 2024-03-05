@@ -1,9 +1,28 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import "./nav-bar.css";
+// import { useQuery } from "@tanstack/react-query";
+import { Avatar, Dropdown } from "antd";
+import { UserOutlined, SettingOutlined, LogoutOutlined, MoreOutlined } from '@ant-design/icons';
+
+
+
+// const fetchUserData = async () => {
+//   const response = await fetch('/api/user');
+//   if (!response.ok) throw new Error('Network response was not ok');
+//   return response.json();
+// };
 
 
 const NavBar = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout,user } = useAuth0();
+
+  
+  // const { data: user } = useQuery({
+  //   queryKey: ['user'],
+  //   queryFn: fetchUserData,
+  //   enabled: !!isAuthenticated,
+  // });
+
 
   const handleLoginLogout = () => {
     if (isAuthenticated) {
@@ -13,8 +32,34 @@ const NavBar = () => {
     }
   };
 
+  const items = [
+    {
+      key: 'profile',
+      icon: <UserOutlined />,
+      label: 'Profile',
+      
+    },
+    {
+      key: 'settings',
+      icon: <SettingOutlined />,
+      label: 'Settings',
+    
+    },
+    isAuthenticated ? { // Only add logout item if isAuthenticated is true
+      key: 'logout',
+      icon: <LogoutOutlined />,
+      label: 'Log out',
+      style: { color: 'red' },
+      onClick: handleLoginLogout,
+    } : null,
+  ].filter(item => item !== null); // Filter out null items, keeping all objects
+
+
+
+
+
   return (
-    <div className="nav-bar">
+    <div className="navbar">
       <div className="left-nav">
 
         <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
@@ -26,21 +71,27 @@ const NavBar = () => {
           {isAuthenticated ? (
             <>
               <div className="user-photo">
-                <img src="/src/assets/place-holder-user1.png" alt="Logo" />
+                <Avatar src={user?.picture || "/src/assets/place-holder-user1.png"} alt="User" />
               </div>
-              <div>
-                <div className="user-name">Name Surname</div>
-                <span className="auth-action" onClick={handleLoginLogout}>Log out</span>
+
+              <div className="user-name">{user?.name || "John Doe"}</div>
+              <div className="user-menu">
+                <Dropdown menu={{ items }} placement="bottomRight" trigger={['click']}>
+                  <MoreOutlined/>
+                </Dropdown>
               </div>
             </>
           ) : (
-            <span className="auth-action" onClick={handleLoginLogout}>Log in</span>
+            <>
+              <span className="user-login" onClick={handleLoginLogout}>Log In</span>
+             
+            </>
           )}
         </div>
+
       </div>
     </div>
   );
 };
 
 export default NavBar;
-

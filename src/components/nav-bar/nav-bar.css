@@ -1,6 +1,6 @@
-.nav-bar {
+.navbar {
 	box-sizing: border-box;
-	padding: 0px 120px 0px 25px !important;
+	padding: 0px 35px 0px 25px !important;
 	width: 100%;
 	height: 70px;
 	background: #ffffff;
@@ -37,13 +37,31 @@
 	/* Remove underline from NavLink */
 }
 
-.user-photo img {
+.user-photo span {
 	border-radius: 500px;
-	width: 46px;
-	height: 46px;
-	background-image: url(images/ellipse_1.png);
+	width: 46px !important;
+	height: 46px !important;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.user-name{
+	  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically if needed */
+  width: 100%; /* Set width to match its parent's width */
+}
+
+.user-menu{
+	display: flex;
+}
+
+.user-login{
+	display: flex;
+	justify-content: center; /* Center content horizontally */
+	align-items: center; /* Center content vertically if needed */
+	width: 100%; /* Set width to match its parent's width */
+	margin-right: 46px;
 }
 
 /* Application Name Styles */
@@ -83,9 +101,16 @@
 
 }
 
+.user-invisible-space{
+	
+
+	  
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-	.nav-bar {
+	.navbar {
 		flex-direction: column;
 		height: auto;
 		padding-top: 20px;
