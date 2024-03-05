@@ -20,7 +20,6 @@ function App() {
       <QueryWrapper>
       <NavBar />
         <div>
-
           <ConnectionHealth />
           {isAuthenticated ? (
         <>
@@ -30,7 +29,6 @@ function App() {
       ) : (
         <b>Please Login to see the expenses lists</b>
       )}
-
         </div>
       </QueryWrapper>
       </>

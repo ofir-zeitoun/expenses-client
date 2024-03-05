@@ -8,22 +8,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 }
 
 .left-nav {
 	display: flex;
 	align-items: center;
-	/* Align items vertically in the center */
 }
 
 .right-nav {
 	display: flex;
 	align-items: center;
-	/* Align items vertically in the center */
 }
 
-/* Logo Styles */
 .logo {
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -34,7 +30,6 @@
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	/* Remove underline from NavLink */
 }
 
 .user-photo span {
@@ -45,26 +40,26 @@
 	background-size: cover;
 }
 
-.user-name{
-	  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically if needed */
-  width: 100%; /* Set width to match its parent's width */
+.user-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 }
 
-.user-menu{
+.user-menu {
 	display: flex;
 }
 
-.user-login{
+.user-login {
 	display: flex;
-	justify-content: center; /* Center content horizontally */
-	align-items: center; /* Center content vertically if needed */
-	width: 100%; /* Set width to match its parent's width */
+	justify-content: center;
+	align-items: center;
+	width: 100%;
 	margin-right: 46px;
+	cursor: pointer;
 }
 
-/* Application Name Styles */
 .app-name {
 	font-family: "Montserrat", sans-serif;
 	/* font-optical-sizing: auto; */
@@ -77,7 +72,6 @@
 
 }
 
-/* Auth Action Button Styles */
 .auth-action {
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -90,25 +84,15 @@
 
 .auth-action:hover {
 	text-decoration: underline;
-	/* Add underline on hover for logout/login text */
 }
 
 .auth-container {
-	/* box-sizing: border-box;
-	padding: 0 10px; */
 	display: flex;
 	gap: 30px;
 
 }
 
-.user-invisible-space{
-	
 
-	  
-}
-
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
 	.navbar {
 		flex-direction: column;
