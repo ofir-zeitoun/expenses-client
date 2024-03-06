@@ -1,14 +1,12 @@
-// fetch-expenses.tsx
 import { Expense } from "../../@types/expense";
-import { apiFetch, RequestInitWithBaseUrl } from "../../api";
+import { apiFetch } from "../../api";
 
 const fetchExpenses = async (token: string): Promise<Expense[]> => {
-  const init: RequestInitWithBaseUrl = {
+  const init = {
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
-    baseUrl: import.meta.env.VITE_BASE_URL, 
   };
 
   return apiFetch("/api/expenses", init)

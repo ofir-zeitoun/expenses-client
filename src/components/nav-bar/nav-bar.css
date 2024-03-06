@@ -92,17 +92,11 @@
 
 }
 
-
 @media (max-width: 768px) {
 	.navbar {
 		flex-direction: column;
 		height: auto;
 		padding-top: 20px;
 		padding-bottom: 20px;
-	}
-
-	.logo,
-	.app-name {
-		margin-bottom: 10px;
 	}
 }
