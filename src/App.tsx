@@ -1,24 +1,26 @@
-import mernLogo from "./assets/oz-mern.png";
-import ozLogo from "/oz.png";
+import { useAuth0 } from "@auth0/auth0-react";
+import { ConnectionHealth, Expenses, Header, NavBar } from "./components";
+import { QueryWrapper } from "./components/utilities";
 import "./App.css";
-import Expenses from "./components/expenses/expenses";
-import { Header } from "./components/header";
-import { QueryWrapper } from "./components/utilities/query-wrapper";
-import { ConnectionHealth } from "./components/connection-health";
 
 function App() {
+  const { isAuthenticated } = useAuth0();
+
   return (
-    <>
-      <QueryWrapper>
-        <div>
-          <ConnectionHealth />
-          <Header />
-          <Expenses />
-          <img src={ozLogo} className="logo" alt="Ofir Zeitoun" />
-          <img src={mernLogo} className="logo react" alt="MERN" />
-        </div>
-      </QueryWrapper>
-    </>
+    <QueryWrapper>
+      <NavBar />
+      <div>
+        <ConnectionHealth />
+        {isAuthenticated ? (
+          <>
+            <Header />
+            <Expenses />
+          </>
+        ) : (
+          <b>Please Login to see the expenses lists</b>
+        )}
+      </div>
+    </QueryWrapper>
   );
 }
 

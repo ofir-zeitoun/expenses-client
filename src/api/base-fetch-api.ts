@@ -1,5 +1,5 @@
 export type RequestInitWithBaseUrl = {
-  baseUrl: string;
+  baseUrl?: string;
 } & RequestInit;
 
 export const apiFetch = (url: string, init?: RequestInitWithBaseUrl) =>

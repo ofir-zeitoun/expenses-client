@@ -4,7 +4,7 @@ import "./connection-health.css";
 export const ConnectionHealth = () => {
   const { isSuccess } = useHealthCheck();
   return (
-    <div>
+    <div className="connection-wrapper">
       <div
         className={`connection ${isSuccess ? "connected" : "disconnected"}`}
       />

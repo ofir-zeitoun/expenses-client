@@ -1,0 +1,100 @@
+.navbar {
+	box-sizing: border-box;
+	padding: 0px 35px 0px 25px;
+	width: 100%;
+	height: 70px;
+	background: #ffffff;
+	box-shadow: 1px 4px 40px #E6EAEF;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.left-nav {
+	display: flex;
+	align-items: center;
+}
+
+.right-nav {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 32px;
+	color: #191919;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
+
+.user-photo span {
+	border-radius: 500px;
+	width: 46px;
+	height: 46px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.user-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.user-menu {
+	display: flex;
+}
+
+.user-login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-right: 46px;
+	cursor: pointer;
+}
+
+.app-name {
+	font-family: "Montserrat", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #456085;
+
+}
+
+.auth-action {
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #191919;
+	cursor: pointer;
+}
+
+.auth-action:hover {
+	text-decoration: underline;
+}
+
+.auth-container {
+	display: flex;
+	gap: 30px;
+
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		height: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
