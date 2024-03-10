@@ -4,7 +4,7 @@ import { apiFetch } from "../../api";
 const fetchExpenses = async (token: string): Promise<Expense[]> => {
   const init = {
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
   };

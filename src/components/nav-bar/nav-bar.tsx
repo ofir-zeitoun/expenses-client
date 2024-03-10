@@ -49,7 +49,7 @@ export const NavBar = () => {
                   alt="User"
                 />
               </div>
-              <div className="user-name">{user?.name || "John Doe"}</div>
+              <div className="user-name">{user?.name || "Unknown"}</div>
               <div className="user-menu">
                 <Dropdown
                   menu={{ items }}
