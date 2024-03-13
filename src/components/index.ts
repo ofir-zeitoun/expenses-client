@@ -1,4 +1,4 @@
 export * from "./connection-health";
-export * from "./expenses";
-export * from "./header";
+export * from "./dashboard/expenses-lists";
 export * from "./nav-bar";
+export * from "./dashboard";
