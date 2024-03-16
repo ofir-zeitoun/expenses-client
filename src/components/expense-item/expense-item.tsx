@@ -1,6 +1,5 @@
-import React from "react";
 import { EditOutlined } from "@ant-design/icons";
-import "./ExpenseItem.css";
+import "./expense-item.css";
 import { Expense } from "../../@types/expense";
 
 export const ExpenseItem = ({ item }: { item: Expense }) => {
@@ -20,5 +19,3 @@ export const ExpenseItem = ({ item }: { item: Expense }) => {
     </div>
   );
 };
-
-export default ExpenseItem;

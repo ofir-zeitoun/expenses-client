@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useExpenseLists } from "./useExpenseLists";
-import ExpenseList from "../expense-list/expense-list";
+
 import { Button } from "antd";
-import { SortAscendingOutlined, SortDescendingOutlined } from "@ant-design/icons";
+import {
+  SortAscendingOutlined,
+  SortDescendingOutlined,
+} from "@ant-design/icons";
+import { ExpenseList } from "../expense-list/expense-list";
 
 export const ExpenseListSection = () => {
   const { getAccessTokenSilently } = useAuth0();
@@ -23,7 +27,11 @@ export const ExpenseListSection = () => {
     fetchToken();
   }, [getAccessTokenSilently]);
 
-  const { data: expenseLists, isLoading, error } = useExpenseLists(token, 0, 5, sortOrder, );
+  const {
+    data: expenseLists,
+    isLoading,
+    error,
+  } = useExpenseLists(token, 0, 5, sortOrder);
 
   const toggleSortOrder = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
@@ -35,7 +43,13 @@ export const ExpenseListSection = () => {
   return (
     <div>
       <Button
-        icon={sortOrder === "asc" ? <SortAscendingOutlined /> : <SortDescendingOutlined />}
+        icon={
+          sortOrder === "asc" ? (
+            <SortAscendingOutlined />
+          ) : (
+            <SortDescendingOutlined />
+          )
+        }
         onClick={toggleSortOrder}
       >
         Sort

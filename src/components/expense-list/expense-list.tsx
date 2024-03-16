@@ -6,10 +6,10 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useExpenses } from "./useExpenses";
-import ExpenseItem from "../expense-item/expense-item";
+import { ExpenseItem } from "../expense-item";
 import { ListProps } from "../../@types/expense-list-prop";
 
-const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
+export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
   const { getAccessTokenSilently } = useAuth0();
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [currentPage, setCurrentPage] = useState(1);
@@ -70,5 +70,3 @@ const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
     </div>
   );
 };
-
-export default ExpenseList;

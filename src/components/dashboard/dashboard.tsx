@@ -1,13 +1,16 @@
-import './Dashboard.css';
+import { ExpenseListSection } from "../expense-list-section";
+import { InfoSection } from "../info-section";
+import "./dashboard.css";
 
-
-
-const Dashboard =  () => {
-    return (
-        <div className="dashboard">
-            Dashboard Component
-        </div>
-    );
+export const Dashboard = () => {
+  return (
+    <div className="dashboard">
+      <div className="dashboard-left">
+        <InfoSection />
+      </div>
+      <div className="dashboard-right">
+        <ExpenseListSection />
+      </div>
+    </div>
+  );
 };
-
-export default Dashboard;
