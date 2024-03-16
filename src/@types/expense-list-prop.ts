@@ -1,7 +1,7 @@
 import { Expense } from "./expense";
 
-export type ExpenseList = {
-  id: string;
+export type ListProps = {
+  _id: string;
   name: string;
   createdByUserId: string;
   createdAt: string;

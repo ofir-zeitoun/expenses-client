@@ -2,12 +2,12 @@ import { UseQueryResult, useQuery } from "@tanstack/react-query";
 import { ListProps } from "../../@types/expense-list-prop";
 import { apiFetch } from "../../api";
 
-const fetchExpenseLists = async (
+async function fetchExpense(
   token: string,
   offset: number,
   limit: number,
   sortOrder: "asc" | "desc"
-): Promise<ListProps[]> => {
+): Promise<ListProps[]> {
   const init = {
     headers: {
       "Content-Type": "application/json",
@@ -16,7 +16,7 @@ const fetchExpenseLists = async (
   };
 
   return apiFetch(
-    `/api/expense-list?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
+    `/api/expenses?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
     init
   )
     .then((response) => {
@@ -26,9 +26,9 @@ const fetchExpenseLists = async (
       return response.json();
     })
     .then((data) => data as ListProps[]);
-};
+}
 
-export const useExpenseLists = (
+export const useExpenses = (
   token: string,
   offset: number,
   limit: number,
@@ -36,6 +36,6 @@ export const useExpenseLists = (
 ): UseQueryResult<ListProps[], Error> => {
   return useQuery<ListProps[], Error>({
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
-    queryFn: () => fetchExpenseLists(token, offset, limit, sortOrder),
+    queryFn: () => fetchExpense(token, offset, limit, sortOrder),
   });
 };

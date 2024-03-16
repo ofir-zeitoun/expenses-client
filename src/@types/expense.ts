@@ -1,9 +1,8 @@
 export type Expense = {
-  id: Key | null | undefined;
-  expenses: any;
   _id: string;
+  creatorImageUrl: string;
   name: string;
-  amount: number;
+  price: number;
   cause: string;
   date: string;
 };
