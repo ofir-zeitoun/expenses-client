@@ -6,7 +6,7 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useExpenses } from "./useExpenses";
-import { ExpenseItem } from "../expense-item";
+import { ExpenseItem } from "./expense-item";
 import { ListProps } from "../../@types/expense-list-prop";
 
 export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {

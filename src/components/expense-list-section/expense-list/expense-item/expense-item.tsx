@@ -1,6 +1,6 @@
 import { EditOutlined } from "@ant-design/icons";
 import "./expense-item.css";
-import { Expense } from "../../@types/expense";
+import { Expense } from "../../../@types/expense";
 
 export const ExpenseItem = ({ item }: { item: Expense }) => {
   return (
