@@ -1,7 +1,10 @@
 .expense-list-container {
-    max-height: 500px;
+    max-height: 80vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 34px;
+    gap: 20px;
+    padding: 10px;
+
+
 }

@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { ExpenseList } from "./expense-list";
 import "./expense-list-section.css";
+import ExpenseListToolbar from "./expense-list-toolbar/expense-list-toolbar";
 
 export const ExpenseListSection = () => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
@@ -24,7 +25,7 @@ export const ExpenseListSection = () => {
 
   return (
     <div>
-      <Button
+      {/* <Button
         icon={
           sortOrder === "asc" ? (
             <SortAscendingOutlined />
@@ -35,8 +36,10 @@ export const ExpenseListSection = () => {
         onClick={toggleSortOrder}
       >
         Sort
-      </Button>
+      </Button> */}
       <div className="expense-list-container">
+        <ExpenseListToolbar />
+
         {section?.data?.map((list) => (
           <ExpenseList key={list._id} list={list} />
         ))}

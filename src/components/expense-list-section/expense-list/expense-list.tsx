@@ -9,6 +9,7 @@ import { ExpenseItem } from "./expense-item";
 import { ListProps } from "../../../@types/expense-list-prop";
 import { ExpensesHeader } from "./expenses-header";
 import { ExpenseListHeader } from "./expense-list-header";
+import "./expense-list.css";
 
 export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
@@ -28,7 +29,7 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
   // if (error) return <div>An error occurred: {error.message}</div>;
 
   return (
-    <div>
+    <div className="expenses-list">
       <ExpenseListHeader />
       {/* <Button
         icon={
@@ -43,7 +44,7 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
         Sort
       </Button> */}
       <ExpensesHeader />
-
+      <div className="sperated-expenses-list" />
       {list.expenses?.map((item, index) => (
         <ExpenseItem
           key={item._id}

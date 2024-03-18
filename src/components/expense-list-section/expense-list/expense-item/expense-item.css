@@ -1,105 +1,94 @@
-.expense-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 652px;
-    padding: 12px 20px;
-    background-color: #edf2fc;
-    border-radius: 5px;
-    color: #191919;
-}
-
 .expense-item.odd {
-    background-color: #EDF2FC;
-
+    background-color: #EDF2FC50;
 }
 
 .expense-item.even {
     background-color: #FFFFFF;
 }
 
+.expense-item {
+    display: grid;
+    grid-template-columns: 25px 3fr 1fr 2fr 30px;
+    gap: 20px;
+    align-items: center;
+    max-width: 652px;
+    padding: 12px 20px;
+    background-color: #edf2fc;
+    border-radius: 5px;
+    color: #191919;
+    font-size: 12px;
+}
+
 .expense-icon {
     width: 30px;
-    aspect-ratio: 1;
+    height: 30px;
     object-fit: cover;
-    align-self: start;
+    justify-self: start;
 }
 
 .expense-details {
-    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    align-self: stretch;
-    margin: auto 0;
+    justify-content: center;
+    margin-right: 20px;
 }
 
-.expense-title {
-    font-family: 'Nunito';
-    font-style: normal;
+.expense-title,
+.expense-location {
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 12px;
-    line-height: 16px;
     color: #191919;
 }
 
 .expense-location {
-    margin-top: 6px;
-    font: 300 8px Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 8px;
 }
 
 .expense-price {
-    flex: 0 0 auto;
+    justify-self: center;
     padding: 10px 20px;
-    background-color: #62b16a;
-    color: #fff;
+    background-color: #62b16a10;
+    color: #62b16a;
     border-radius: 8px;
-    align-self: center;
-    font: 700 12px Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
     text-align: center;
-    white-space: nowrap;
 }
 
 .expense-timestamp {
-    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    align-self: stretch;
-    margin: auto 0;
+    justify-content: center;
     text-align: right;
-    white-space: nowrap;
-    font-weight: 400;
+    margin-right: 50px;
 }
 
 .edit-icon {
-    flex: 0 0 auto;
+    justify-self: end;
 }
 
-.expense-date {
-    font: 12px Nunito, sans-serif;
+.expense-date,
+.expense-time {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #191919;
 }
 
 .expense-time {
-    margin-top: 5px;
-    font: 10px Nunito, sans-serif;
-}
-
-.arrow-icon {
-    width: 16px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    align-self: stretch;
-    margin: auto 0;
+    font-size: 10px;
 }
 
 .user-icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #f0f0f0;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .user-icon {
@@ -107,18 +96,18 @@
     color: #888;
 }
 
-
 @media (max-width: 991px) {
     .expense-item {
-        flex-wrap: wrap;
-        padding-right: 20px;
+        grid-template-columns: 1fr;
+
+        text-align: center;
     }
 
-    .expense-amount {
-        white-space: initial;
-    }
+    .expense-icon,
+    .user-icon-wrapper,
+    .expense-price,
+    .edit-icon {
+        justify-self: center;
 
-    .expense-timestamp {
-        white-space: initial;
     }
 }
