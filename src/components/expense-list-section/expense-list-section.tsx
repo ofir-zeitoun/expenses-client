@@ -9,13 +9,10 @@ import {
 import { ExpenseList } from "./expense-list";
 
 export const ExpenseListSection = () => {
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
-  const {
-    data: expenseLists,
-    isLoading,
-    error,
-  } = useExpenseLists(0, 5, sortOrder);
+  const { data: section, isLoading, error } = useExpenseLists(0, 5, sortOrder);
+  console.log(section);
 
   const toggleSortOrder = () => {
     setSortOrder(sortOrder === "asc" ? "desc" : "asc");
@@ -38,7 +35,7 @@ export const ExpenseListSection = () => {
       >
         Sort
       </Button>
-      {expenseLists?.map((list) => (
+      {section?.data?.map((list) => (
         <ExpenseList key={list._id} list={list} />
       ))}
     </div>

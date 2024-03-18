@@ -1,0 +1,61 @@
+.expenses-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    max-width: 652px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #191919;
+}
+
+.expenses-header-participant {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+}
+
+.expenses-header-expense,
+.expenses-header-price,
+.expenses-header-date-time {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    text-align: center;
+
+}
+
+.expenses-header>div:not(:first-child) {
+    padding-right: 16px;
+}
+
+.expenses-header-arrow-icon {
+    cursor: pointer;
+}
+
+
+
+
+.expenses-header-participant-label,
+.expenses-header-expense-label,
+.expenses-header-price-label,
+.expenses-header-date-time-label {
+    font-family: Nunito, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width: 991px) {
+    .expenses-header>div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .expenses-header-arrow-icon {
+        width: 6px;
+    }
+}

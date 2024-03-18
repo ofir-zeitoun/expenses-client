@@ -1,13 +1,15 @@
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
-import { ListProps } from "../../@types/expense-list-prop";
-import { apiFetch } from "../../api";
+import { Expense } from "../../../@types/expense";
+import { apiFetch } from "../../../api";
+import { useEffect, useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 async function fetchExpense(
   token: string,
   offset: number,
   limit: number,
   sortOrder: "asc" | "desc"
-): Promise<ListProps[]> {
+): Promise<Expense[]> {
   const init = {
     headers: {
       "Content-Type": "application/json",
@@ -25,17 +27,33 @@ async function fetchExpense(
       }
       return response.json();
     })
-    .then((data) => data as ListProps[]);
+    .then((data) => data as Expense[]);
 }
 
-export const useExpenses = (
-  token: string,
+export const useExpense = (
   offset: number,
   limit: number,
   sortOrder: "asc" | "desc"
-): UseQueryResult<ListProps[], Error> => {
-  return useQuery<ListProps[], Error>({
+): UseQueryResult<Expense[], Error> => {
+  const [token, setToken] = useState("");
+  const { getAccessTokenSilently } = useAuth0();
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const accessToken = await getAccessTokenSilently();
+        setToken(accessToken);
+      } catch (error) {
+        console.error("Error fetching the access token", error);
+      }
+    })();
+  }, [getAccessTokenSilently, setToken]);
+
+  return useQuery<Expense[], Error>({
+    enabled: !!token,
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
     queryFn: () => fetchExpense(token, offset, limit, sortOrder),
   });
 };
+
+

@@ -1,0 +1,124 @@
+.expense-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 652px;
+    padding: 12px 20px;
+    background-color: #edf2fc;
+    border-radius: 5px;
+    color: #191919;
+}
+
+.expense-item.odd {
+    background-color: #EDF2FC;
+
+}
+
+.expense-item.even {
+    background-color: #FFFFFF;
+}
+
+.expense-icon {
+    width: 30px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    align-self: start;
+}
+
+.expense-details {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.expense-title {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #191919;
+}
+
+.expense-location {
+    margin-top: 6px;
+    font: 300 8px Montserrat, sans-serif;
+}
+
+.expense-price {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    background-color: #62b16a;
+    color: #fff;
+    border-radius: 8px;
+    align-self: center;
+    font: 700 12px Nunito, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.expense-timestamp {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    margin: auto 0;
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.edit-icon {
+    flex: 0 0 auto;
+}
+
+.expense-date {
+    font: 12px Nunito, sans-serif;
+}
+
+.expense-time {
+    margin-top: 5px;
+    font: 10px Nunito, sans-serif;
+}
+
+.arrow-icon {
+    width: 16px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+.user-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #888;
+}
+
+
+@media (max-width: 991px) {
+    .expense-item {
+        flex-wrap: wrap;
+        padding-right: 20px;
+    }
+
+    .expense-amount {
+        white-space: initial;
+    }
+
+    .expense-timestamp {
+        white-space: initial;
+    }
+}
