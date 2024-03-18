@@ -7,6 +7,7 @@ import {
   SortDescendingOutlined,
 } from "@ant-design/icons";
 import { ExpenseList } from "./expense-list";
+import "./expense-list-section.css";
 
 export const ExpenseListSection = () => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
@@ -35,9 +36,11 @@ export const ExpenseListSection = () => {
       >
         Sort
       </Button>
-      {section?.data?.map((list) => (
-        <ExpenseList key={list._id} list={list} />
-      ))}
+      <div className="expense-list-container">
+        {section?.data?.map((list) => (
+          <ExpenseList key={list._id} list={list} />
+        ))}
+      </div>
     </div>
   );
 };

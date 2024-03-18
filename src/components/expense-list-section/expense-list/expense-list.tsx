@@ -8,6 +8,7 @@ import {
 import { ExpenseItem } from "./expense-item";
 import { ListProps } from "../../../@types/expense-list-prop";
 import { ExpensesHeader } from "./expenses-header";
+import { ExpenseListHeader } from "./expense-list-header";
 
 export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
@@ -28,7 +29,7 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
 
   return (
     <div>
-      <h2>{list.name}</h2>
+      <ExpenseListHeader />
       {/* <Button
         icon={
           sortOrder === "asc" ? (
@@ -51,13 +52,13 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
         />
       ))}
       <div>
-        <Button
+        {/* <Button
           onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
           disabled={currentPage === 1}
         >
           Previous
         </Button>
-        <Button onClick={() => setCurrentPage((p) => p + 1)}>Next</Button>
+        <Button onClick={() => setCurrentPage((p) => p + 1)}>Next</Button> */}
       </div>
     </div>
   );
