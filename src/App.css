@@ -24,3 +24,8 @@ body {
   will-change: filter;
   transition: filter 300ms;
 }
+
+.transparent {
+  background: transparent !important;
+  color: transparent !important;
+}

@@ -39,8 +39,8 @@ export const ExpenseListHeader = ({
     <div className="expense-list-header">
       <h2 className="list-name">{listName || "List"}</h2>
       <div className="list-header-actions">
-        <div className="total-amount">{totalAmount || "350.00$"}</div>
-        <button className="filter-button">Filter</button>
+        <div className="total-amount">{totalAmount + "$" || "350.00$"}</div>
+        {/* <button className="filter-button transparent">Filter</button> */}
         <button className="sort-button">Sort</button>
         <div className="list-options-icon">
           <Dropdown
