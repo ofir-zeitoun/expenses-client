@@ -5,7 +5,7 @@
     font-size: 14px;
     text-align: center;
     justify-content: space-between;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 
 }
 
@@ -13,14 +13,17 @@
     display: flex;
 }
 
-.toolbar-sort {
+.toolbar-sort,
+.toolbar-sort:focus {
     background-color: Transparent;
     background-repeat: no-repeat;
     border: none;
+    outline: none;
     cursor: pointer;
+
     overflow: hidden;
     color: #5b93ff;
-    outline: none;
+
     /* justify-content: center;
     align-items: center;
     text-align: center; */

@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./nav-bar.css";
+import { ConnectionHealth } from "../connection-health";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
@@ -39,6 +40,9 @@ export const NavBar = () => {
         <span className="app-name">Expenses Dashboard</span>
       </div>
       <div className="right-nav">
+        <div className="ConnectionHealth">
+          <ConnectionHealth />
+        </div>
         <div className="auth-container">
           {isAuthenticated ? (
             <>

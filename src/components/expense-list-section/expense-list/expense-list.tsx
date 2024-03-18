@@ -14,6 +14,8 @@ import "./expense-list.css";
 export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
   const [currentPage, setCurrentPage] = useState(1);
+  const totalAmount =
+    list.expenses?.reduce((sum, item) => sum + item.price, 0) || 0;
 
   // const {
   //   data: expenses,
@@ -30,7 +32,10 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
 
   return (
     <div className="expenses-list">
-      <ExpenseListHeader />
+      <ExpenseListHeader
+        listName={list.name}
+        totalAmount={totalAmount.toFixed(2)}
+      />
       {/* <Button
         icon={
           sortOrder === "asc" ? (

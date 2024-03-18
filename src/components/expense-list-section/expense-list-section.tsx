@@ -25,7 +25,7 @@ export const ExpenseListSection = () => {
 
   return (
     <div>
-      {/* <Button
+      <Button
         icon={
           sortOrder === "asc" ? (
             <SortAscendingOutlined />
@@ -36,9 +36,9 @@ export const ExpenseListSection = () => {
         onClick={toggleSortOrder}
       >
         Sort
-      </Button> */}
+      </Button>
       <div className="expense-list-container">
-        <ExpenseListToolbar />
+        <ExpenseListToolbar toggleSortOrder={toggleSortOrder} />
 
         {section?.data?.map((list) => (
           <ExpenseList key={list._id} list={list} />

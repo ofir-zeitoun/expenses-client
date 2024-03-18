@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { ConnectionHealth, Dashboard, NavBar } from "./components";
+import { Dashboard, NavBar } from "./components";
 import { QueryWrapper } from "./components/utilities";
 import "./App.css";
 
@@ -9,9 +9,9 @@ function App() {
   return (
     <QueryWrapper>
       <NavBar />
+      <br />
+      <br />
       <div>
-        <ConnectionHealth />
-
         {isAuthenticated ? (
           <Dashboard />
         ) : (

@@ -1,7 +1,6 @@
 import React from "react";
-import { Dropdown, Menu, Button } from "antd";
+import { Dropdown } from "antd";
 import {
-  EllipsisOutlined,
   UserOutlined,
   SettingOutlined,
   DeleteFilled,
