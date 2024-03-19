@@ -27,7 +27,6 @@
 	align-items: center;
 }
 
-
 .logo {
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -45,6 +44,7 @@
 	height: 46px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	justify-content: center;
 }
 
 .user-name {
@@ -95,7 +95,6 @@
 .auth-container {
 	display: flex;
 	gap: 30px;
-
 }
 
 @media (max-width: 768px) {

@@ -12,15 +12,12 @@ const Tab: React.FC<TabProps> = ({ label, onClick, isActive }) => (
     {label}
   </div>
 );
+
 interface ExpenseListToolbarProps {
   toggleSortOrder: () => void;
 }
 
-const ExpenseListToolbar = ({
-  toggleSortOrder,
-}: {
-  toggleSortOrder: ExpenseListToolbarProps;
-}) => {
+const ExpenseListToolbar = ({ toggleSortOrder }: ExpenseListToolbarProps) => {
   const [activeTab, setActiveTab] = useState<string>("Groups");
 
   const handleTabClick = (label: string) => {

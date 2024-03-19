@@ -8,7 +8,6 @@
     font-size: 12px;
     color: #191919;
     align-items: center;
-
 }
 
 .expenses-header-participant,
@@ -17,9 +16,7 @@
 .expenses-header-date-time {
     display: flex;
     justify-content: left;
-
     text-align: center;
-
 }
 
 .expenses-header>div:not(:first-child) {
@@ -29,9 +26,7 @@
 .expenses-header-arrow-icon {
     cursor: pointer;
     justify-self: end;
-
 }
-
 
 .expenses-header-participant-label,
 .expenses-header-expense-label,
@@ -45,7 +40,6 @@
 @media (max-width: 991px) {
     .expenses-header {
         grid-template-columns: repeat(4, 1fr);
-
     }
 
     .expenses-header-arrow-icon {

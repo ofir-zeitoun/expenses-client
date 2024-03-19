@@ -1,22 +1,15 @@
-import React, { useState } from "react";
-import { Button } from "antd";
-import {
-  SortAscendingOutlined,
-  SortDescendingOutlined,
-} from "@ant-design/icons";
-
 import { ExpenseItem } from "./expense-item";
 import { ListProps } from "../../../@types/expense-list-prop";
 import { ExpensesHeader } from "./expenses-header";
 import { ExpenseListHeader } from "./expense-list-header";
 import "./expense-list.css";
 
-export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalAmount =
-    list.expenses?.reduce((sum, item) => sum + item.price, 0) || 0;
-
+export const ExpenseList = ({ list }: { list: ListProps }) => {
+  {
+    /* TODO: */
+  }
+  // const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
+  // const [currentPage, setCurrentPage] = useState(1);
   // const {
   //   data: expenses,
   //   isLoading,
@@ -34,8 +27,9 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
     <div className="expenses-list">
       <ExpenseListHeader
         listName={list.name}
-        totalAmount={totalAmount.toFixed(2)}
+        expenseTotal={list.expenseTotal.toFixed(2)}
       />
+      {/* TODO: */}
       {/* <Button
         icon={
           sortOrder === "asc" ? (
@@ -58,6 +52,7 @@ export const ExpenseList: React.FC<{ list: ListProps }> = ({ list }) => {
         />
       ))}
       <div>
+        {/* TODO */}
         {/* <Button
           onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
           disabled={currentPage === 1}

@@ -1,14 +1,6 @@
-/* .list-container {
-    display: flex;
-    max-width: 656px;
-    flex-direction: column;
-} */
-
 .expense-list-header {
     display: flex;
-    /* width: 100%; */
     gap: 20px;
-    /* padding: 0 30px 0 0; */
     justify-content: space-between;
     align-items: center;
 }
@@ -47,9 +39,7 @@
         font-family: Nunito, sans-serif;
         font-weight: 700;
         margin-right: 28px;
-        /* background: #5b95ff0f; */
-        /* padding: 6px; */
-        /* border-radius: 8px; */
+
     }
 
     .list-filters {

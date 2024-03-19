@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import "./expenses-header.css";
 
 type SortDirection = "asc" | "desc";
 type SortField = "participant" | "expense" | "price" | "date";
 
-export const ExpensesHeader: React.FC = () => {
+export const ExpensesHeader = () => {
   const [sortOrder, setSortOrder] = useState<SortDirection>("desc");
   const [sortField, setSortField] = useState<SortField>("date");
 

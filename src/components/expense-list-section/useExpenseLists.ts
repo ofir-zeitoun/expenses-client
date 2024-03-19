@@ -1,15 +1,25 @@
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
-import { ListProps } from "../../@types/expense-list-prop";
 import { apiFetch } from "../../api";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
+import { ListProps } from "../../@types/expense-list-prop";
+
+interface ExpenseListsResponse {
+  data: ListProps[];
+  isLoading: boolean;
+  error: Error | null;
+  limit: number;
+  offset: number;
+  sortOrder: "asc" | "desc";
+  total: number;
+}
 
 const fetchExpenseLists = async (
   token: string,
   offset: number,
   limit: number,
   sortOrder: "asc" | "desc"
-): Promise<ListProps[]> => {
+): Promise<ExpenseListsResponse> => {
   const init = {
     headers: {
       "Content-Type": "application/json",
@@ -27,14 +37,14 @@ const fetchExpenseLists = async (
       }
       return response.json();
     })
-    .then((data) => data as ListProps[]);
+    .then((data) => data as ExpenseListsResponse);
 };
 
 export const useExpenseLists = (
   offset: number,
   limit: number,
   sortOrder: "asc" | "desc"
-): UseQueryResult<ListProps[], Error> => {
+): UseQueryResult<ExpenseListsResponse, Error> => {
   const [token, setToken] = useState("");
   const { getAccessTokenSilently } = useAuth0();
 
@@ -49,10 +59,9 @@ export const useExpenseLists = (
     })();
   }, [getAccessTokenSilently, setToken]);
 
-  return useQuery<ListProps[], Error>({
+  return useQuery<ExpenseListsResponse, Error>({
     enabled: !!token,
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
     queryFn: () => fetchExpenseLists(token, offset, limit, sortOrder),
   });
 };
-
