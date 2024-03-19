@@ -1,10 +1,10 @@
 import { ExpenseItem } from "./expense-item";
-import { ListProps } from "../../../@types/expense-list-prop";
+import { ExpenseLIstType } from "../../../@types/expense-list-prop";
 import { ExpensesHeader } from "./expenses-header";
 import { ExpenseListHeader } from "./expense-list-header";
 import "./expense-list.css";
 
-export const ExpenseList = ({ list }: { list: ListProps }) => {
+export const ExpenseList = ({ list }: { list: ExpenseLIstType }) => {
   {
     /* TODO: */
   }
@@ -44,10 +44,10 @@ export const ExpenseList = ({ list }: { list: ListProps }) => {
       </Button> */}
       <ExpensesHeader />
       <div className="sperated-expenses-list" />
-      {list.expenses?.map((item, index) => (
+      {list.expenses?.map((expense, index) => (
         <ExpenseItem
-          key={item._id}
-          item={item}
+          key={expense._id}
+          expense={expense}
           className={index % 2 === 0 ? "expense-item even" : "expense-item odd"}
         />
       ))}

@@ -6,8 +6,8 @@ import {
   MoreOutlined,
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
-import "./nav-bar.css";
 import { ConnectionHealth } from "../connection-health";
+import "./nav-bar.css";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
@@ -27,7 +27,7 @@ export const NavBar = () => {
       key: "logout",
       icon: <LogoutOutlined />,
       label: "Log out",
-      style: { color: "red" },
+      className: "menu-logout",
       onClick: () =>
         logout({ logoutParams: { returnTo: window.location.origin } }),
     },

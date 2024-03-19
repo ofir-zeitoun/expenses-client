@@ -1,14 +1,15 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
 import { Expense } from "../../../@types/expense";
 import { apiFetch } from "../../../api";
 import { useEffect, useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import { SortOrder } from "../../../@types/sortOrderTypes";
 
 async function fetchExpense(
   token: string,
   offset: number,
   limit: number,
-  sortOrder: "asc" | "desc"
+  sortOrder: SortOrder
 ): Promise<Expense[]> {
   const init = {
     headers: {
@@ -33,7 +34,7 @@ async function fetchExpense(
 export const useExpense = (
   offset: number,
   limit: number,
-  sortOrder: "asc" | "desc"
+  sortOrder: SortOrder
 ): UseQueryResult<Expense[], Error> => {
   const [token, setToken] = useState("");
   const { getAccessTokenSilently } = useAuth0();
@@ -55,5 +56,3 @@ export const useExpense = (
     queryFn: () => fetchExpense(token, offset, limit, sortOrder),
   });
 };
-
-

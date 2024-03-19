@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PlusOutlined } from "@ant-design/icons";
 import "./expense-list-toolbar.css";
 
 interface TabProps {
@@ -7,7 +8,7 @@ interface TabProps {
   isActive: boolean;
 }
 
-const Tab: React.FC<TabProps> = ({ label, onClick, isActive }) => (
+const Tab = ({ label, onClick, isActive }: TabProps) => (
   <div className={`tab ${isActive ? "active" : ""}`} onClick={onClick}>
     {label}
   </div>
@@ -28,9 +29,9 @@ const ExpenseListToolbar = ({ toggleSortOrder }: ExpenseListToolbarProps) => {
   return (
     <header className="expense-list-toolbar">
       <nav className="tabs">
-        {["Personal", "Groups"].map((tabLabel, index) => (
+        {["Personal", "Groups"].map((tabLabel) => (
           <Tab
-            key={index}
+            key={tabLabel}
             label={tabLabel}
             isActive={activeTab === tabLabel}
             onClick={() => handleTabClick(tabLabel)}
@@ -43,7 +44,7 @@ const ExpenseListToolbar = ({ toggleSortOrder }: ExpenseListToolbarProps) => {
           Sort
         </button>
         <div className="add-list-button">
-          <span>+</span> Add List
+          <PlusOutlined /> Add List
         </div>
       </div>
     </header>

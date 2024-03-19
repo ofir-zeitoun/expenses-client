@@ -3,20 +3,13 @@
     gap: 20px;
     justify-content: space-between;
     align-items: center;
-}
-
-@media (max-width: 991px) {
-    .expense-list-header {
-        max-width: 100%;
-        flex-wrap: wrap;
-    }
+    font: 700 18px Nunito, sans-serif;
 }
 
 .expense-list-header {
 
     .list-name {
         color: #191919;
-        font: 700 18px Nunito, sans-serif;
         margin: 0;
     }
 
@@ -26,12 +19,6 @@
         font-size: 16px;
         white-space: nowrap;
 
-    }
-
-    @media (max-width: 991px) {
-        .list-header-actions {
-            white-space: initial;
-        }
     }
 
     .total-amount {
@@ -47,12 +34,6 @@
         gap: 20px;
         font-weight: 400;
         align-items: center;
-    }
-
-    @media (max-width: 991px) {
-        .list-filters {
-            white-space: initial;
-        }
     }
 
     .filter-button,
@@ -91,10 +72,8 @@
         width: 100%;
     }
 
-    @media (max-width: 991px) {
-        .list-divider {
-            max-width: 100%;
-            margin-top: 40px;
-        }
-    }
+}
+
+.menu-Remove {
+    color: "red"
 }

@@ -1,51 +1,26 @@
-import { EditOutlined, UserOutlined } from "@ant-design/icons";
-import "./expense-item.css";
+import { EditOutlined } from "@ant-design/icons";
+import UserPicture from "../../../shared/user-picture/user-picture";
 import { Expense } from "../../../../@types/expense";
+import { formatDate, formatTime } from "../../../utilities/format-time";
+import "./expense-item.css";
 
 export const ExpenseItem = ({
-  item,
+  expense,
   className,
 }: {
-  item: Expense;
+  expense: Expense;
   className?: string;
 }) => {
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    });
-  };
-
-  const formatTime = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleTimeString("en-GB", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  };
-
   return (
     <div className={`expense-item ${className}`}>
-      {item.creatorImageUrl ? (
-        <img
-          className="expense-icon"
-          src={item.creatorImageUrl}
-          alt="Creator"
-        />
-      ) : (
-        <div className="user-icon-wrapper">
-          <UserOutlined className="user-icon" />
-        </div>
-      )}
+      <UserPicture creatorImageUrl={expense.creatorImageUrl} />
       <div className="expense-details">
-        <div className="expense-title">{item.name}</div>
+        <div className="expense-title">{expense.name}</div>
       </div>
-      <div className="expense-price">${item.price.toFixed(2)}</div>
+      <div className="expense-price">${expense.price.toFixed(2)}</div>
       <div className="expense-timestamp">
-        <div className="expense-date">{formatDate(item.createdAt)}</div>
-        <div className="expense-time">{formatTime(item.createdAt)}</div>
+        <div className="expense-date">{formatDate(expense.createdAt)}</div>
+        <div className="expense-time">{formatTime(expense.createdAt)}</div>
       </div>
       <EditOutlined className="edit-icon" />
     </div>

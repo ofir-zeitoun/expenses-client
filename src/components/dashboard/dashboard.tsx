@@ -5,10 +5,10 @@ import "./dashboard.css";
 export const Dashboard = () => {
   return (
     <div className="dashboard">
-      <div className="dashboard-left">
+      <div className="overview-section">
         <OverviewSection />
       </div>
-      <div className="dashboard-right">
+      <div className="expense-list-section">
         <ExpenseListSection />
       </div>
     </div>

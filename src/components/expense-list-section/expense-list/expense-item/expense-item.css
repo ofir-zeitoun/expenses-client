@@ -96,18 +96,3 @@
     color: #888;
 }
 
-@media (max-width: 991px) {
-    .expense-item {
-        grid-template-columns: 1fr;
-
-        text-align: center;
-    }
-
-    .expense-icon,
-    .user-icon-wrapper,
-    .expense-price,
-    .edit-icon {
-        justify-self: center;
-
-    }
-}

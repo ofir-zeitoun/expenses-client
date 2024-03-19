@@ -72,12 +72,3 @@
     width: 9px;
     object-fit: contain;
 }
-
-@media (max-width: 991px) {
-
-    .tabs,
-    .add-list-button {
-        white-space: initial;
-        padding: 0 14px;
-    }
-}

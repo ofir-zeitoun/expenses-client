@@ -1,5 +1,5 @@
 export type Expense = {
-  createdAt: string;
+  createdAt: Date;
   _id: string;
   creatorImageUrl: string;
   name: string;

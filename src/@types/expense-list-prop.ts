@@ -1,6 +1,6 @@
 import { Expense } from "./expense";
 
-export type ListProps = {
+export type ExpenseLIstType = {
   expenseTotal: string;
   _id: string;
   name: string;

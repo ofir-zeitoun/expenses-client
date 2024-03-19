@@ -1,9 +1,10 @@
 .dashboard {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
-.dashboard-left,
-.dashboard-right {
+.overview-section,
+.expense-list-section {
     width: 48%;
 }

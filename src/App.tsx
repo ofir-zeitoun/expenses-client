@@ -9,8 +9,6 @@ function App() {
   return (
     <QueryWrapper>
       <NavBar />
-      <br />
-      <br />
       <div>
         {isAuthenticated ? (
           <Dashboard />

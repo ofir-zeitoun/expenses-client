@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { SortOrder } from "../../@types/sortOrderTypes";
 import ExpenseListToolbar from "./expense-list-toolbar/expense-list-toolbar";
 import { ExpenseList } from "./expense-list";
 import { useExpenseLists } from "./useExpenseLists";
 import "./expense-list-section.css";
 
 export const ExpenseListSection = () => {
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+  const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
   const { data: section, isLoading, error } = useExpenseLists(0, 5, sortOrder);
 
   const toggleSortOrder = () => {

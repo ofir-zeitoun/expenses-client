@@ -20,12 +20,6 @@
 	align-items: center;
 }
 
-.ConnectionHealth {
-
-	align-items: center;
-	justify-content: center;
-	align-items: center;
-}
 
 .logo {
 	font-family: 'Montserrat', sans-serif;
@@ -104,4 +98,8 @@
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
+}
+
+.menu-logout {
+	color: "red"
 }

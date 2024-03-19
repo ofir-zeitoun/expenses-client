@@ -29,7 +29,7 @@ export const ExpenseListHeader = ({
       key: "delete",
       icon: <DeleteFilled />,
       label: "Remove List",
-      style: { color: "red" },
+      className: "menu-Remove",
       onClick: () => console.log("test logout"),
     },
   ];
@@ -38,9 +38,7 @@ export const ExpenseListHeader = ({
     <div className="expense-list-header">
       <h2 className="list-name">{listName || "List"}</h2>
       <div className="list-header-actions">
-        <div className="total-amount">{expenseTotal + "$" || "350.00$"}</div>
-        {/* TODO: */}
-        {/* <button className="filter-button transparent">Filter</button> */}
+        <div className="total-amount">{expenseTotal + "$" || "0"}</div>
         <button className="sort-button">Sort</button>
         <div className="list-options-icon">
           <Dropdown

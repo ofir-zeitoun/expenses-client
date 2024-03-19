@@ -37,12 +37,6 @@
     font-weight: bold;
 }
 
-@media (max-width: 991px) {
-    .expenses-header {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .expenses-header-arrow-icon {
-        width: 6px;
-    }
+.expenses-header-arrow-icon {
+    width: 6px;
 }
