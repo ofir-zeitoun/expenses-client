@@ -1,0 +1,74 @@
+.expense-list-toolbar {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.toolbar-action {
+    display: flex;
+}
+
+.toolbar-sort,
+.toolbar-sort:focus {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    color: #5b93ff;
+}
+
+.toolbar-sort:focus {
+    border: none;
+}
+
+.tabs {
+    border-radius: 10px;
+    background-color: #ebf0f7;
+    display: flex;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tab,
+.active {
+    padding: 10px 17px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Nunito, sans-serif;
+    color: #425b7b;
+    cursor: pointer;
+    min-width: 80px;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: #425b7b;
+    color: #fff;
+}
+
+.add-list-button {
+    border-radius: 10px;
+    background-color: #425b7b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 17px;
+    border: none;
+    cursor: pointer;
+    font-family: Nunito, sans-serif;
+    min-width: 80px;
+}
+
+.icon {
+    width: 9px;
+    object-fit: contain;
+}

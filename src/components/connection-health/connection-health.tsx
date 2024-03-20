@@ -8,7 +8,7 @@ export const ConnectionHealth = () => {
       <div
         className={`connection ${isSuccess ? "connected" : "disconnected"}`}
       />
-      <span>{isSuccess ? "Connected" : "Disconnected!"}</span>
+      <span>{isSuccess ? "Server Connected" : "Server Disconnected!"}</span>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { ConnectionHealth, Expenses, Header, NavBar } from "./components";
+import { Dashboard, NavBar } from "./components";
 import { QueryWrapper } from "./components/utilities";
 import "./App.css";
 
@@ -10,12 +10,8 @@ function App() {
     <QueryWrapper>
       <NavBar />
       <div>
-        <ConnectionHealth />
         {isAuthenticated ? (
-          <>
-            <Header />
-            <Expenses />
-          </>
+          <Dashboard />
         ) : (
           <b>Please Login to see the expenses lists</b>
         )}

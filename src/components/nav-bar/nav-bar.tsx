@@ -6,6 +6,7 @@ import {
   MoreOutlined,
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
+import { ConnectionHealth } from "../connection-health";
 import "./nav-bar.css";
 
 export const NavBar = () => {
@@ -26,7 +27,7 @@ export const NavBar = () => {
       key: "logout",
       icon: <LogoutOutlined />,
       label: "Log out",
-      style: { color: "red" },
+      className: "menu-logout",
       onClick: () =>
         logout({ logoutParams: { returnTo: window.location.origin } }),
     },
@@ -39,6 +40,9 @@ export const NavBar = () => {
         <span className="app-name">Expenses Dashboard</span>
       </div>
       <div className="right-nav">
+        <div className="ConnectionHealth">
+          <ConnectionHealth />
+        </div>
         <div className="auth-container">
           {isAuthenticated ? (
             <>

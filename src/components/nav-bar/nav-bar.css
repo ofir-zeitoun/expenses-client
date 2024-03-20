@@ -20,6 +20,7 @@
 	align-items: center;
 }
 
+
 .logo {
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -37,6 +38,7 @@
 	height: 46px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	justify-content: center;
 }
 
 .user-name {
@@ -87,7 +89,6 @@
 .auth-container {
 	display: flex;
 	gap: 30px;
-
 }
 
 @media (max-width: 768px) {
@@ -97,4 +98,8 @@
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
+}
+
+.menu-logout {
+	color: "red"
 }

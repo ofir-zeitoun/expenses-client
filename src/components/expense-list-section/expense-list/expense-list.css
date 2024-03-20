@@ -1,0 +1,13 @@
+.expenses-list {
+    border-radius: 10px;
+    padding: 20px 20px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 2px 4px rgb(201 203 205 / 10%);
+    border-radius: 10px;
+
+}
+
+.sperated-expenses-list {
+    opacity: 0.05;
+    border: 1px solid #001930;
+}

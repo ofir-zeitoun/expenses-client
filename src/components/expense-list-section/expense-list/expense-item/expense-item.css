@@ -1,0 +1,98 @@
+.expense-item.odd {
+    background-color: #EDF2FC50;
+}
+
+.expense-item.even {
+    background-color: #FFFFFF;
+}
+
+.expense-item {
+    display: grid;
+    grid-template-columns: 25px 3fr 1fr 2fr 20px;
+    gap: 20px;
+    align-items: center;
+    max-width: 652px;
+    padding: 12px 20px;
+    background-color: #edf2fc;
+    border-radius: 5px;
+    color: #191919;
+    font-size: 12px;
+}
+
+.expense-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    justify-self: start;
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.expense-title,
+.expense-location {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #191919;
+}
+
+.expense-location {
+    font-weight: 300;
+    font-size: 8px;
+}
+
+.expense-price {
+    justify-self: center;
+    padding: 10px 20px;
+    background-color: #62b16a10;
+    color: #62b16a;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+}
+
+.expense-timestamp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.edit-icon {
+    justify-self: end;
+}
+
+.expense-date,
+.expense-time {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #191919;
+}
+
+.expense-time {
+    font-size: 10px;
+}
+
+.user-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon {
+    font-size: 24px;
+    color: #888;
+}
+
