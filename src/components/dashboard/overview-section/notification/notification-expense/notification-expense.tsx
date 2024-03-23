@@ -1,5 +1,5 @@
 import { UserPicture } from "../../../../shared/user-picture";
-import "./notification.css";
+import "./notification-expense.css";
 
 interface NotificationExpenseProps {
   avatarSrc: string;
@@ -15,7 +15,7 @@ export const NotificationExpense = ({
   amount,
 }: NotificationExpenseProps) => {
   return (
-    <div className="notification-item">
+    <div className="notification-expense">
       <UserPicture creatorImageUrl={avatarSrc} />
       <div className="notification-content">
         <p className="notification-description">

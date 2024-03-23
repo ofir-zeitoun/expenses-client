@@ -11,7 +11,15 @@
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 20px;
     justify-content: center;
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
+    width: 90%;
 }
 
+.notification-card {
+    box-shadow: 2px 2px 2px 4px rgba(201, 203, 205, 0.1);
+    width: 90%;
+    height: 52vh;
+    border-radius: 10px;
+    margin-top: -4px;
+}

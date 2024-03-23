@@ -1,36 +1,92 @@
 import React from "react";
 import "./notification.css";
-import { NotificationItem } from "./notification-expense";
+import { NotificationExpense } from "./notification-expense";
+import { NotificationInvitation } from "./notification-invitation";
 
-const mockNotifications = [
+type NotificationType =
+  | { type: "expense"; props: NotificationExpenseProps }
+  | { type: "invitation"; props: NotificationInvitationProps };
+
+interface NotificationExpenseProps {
+  avatarSrc: string;
+  expenseDescription: string;
+  listName: string;
+  amount: number;
+}
+
+interface NotificationInvitationProps {
+  avatarSrc: string;
+  listName: string;
+  responses: { accepted: boolean }[];
+}
+
+const notifications: NotificationType[] = [
   {
     type: "expense",
-    avatarSrc: "avatar1.jpg",
-    description: "Added a new coffee expense",
-    amount: 5,
-    listName: "Office Expenses",
+    props: {
+      avatarSrc: "",
+      expenseDescription: "Coffee",
+      listName: "Office Expenses",
+      amount: 100,
+    },
+  },
+  {
+    type: "expense",
+    props: {
+      avatarSrc: "",
+      expenseDescription: "Groceries",
+      listName: "Office Expenses",
+      amount: 100,
+    },
   },
   {
     type: "invitation",
-    avatarSrc: "avatar2.jpg",
-    description: "Invited you to join",
-    listName: "Project X",
-    inviteeAvatars: ["invitee1.jpg", "invitee2.jpg"],
+    props: {
+      avatarSrc: "",
+      listName: "Project X",
+      responses: [{ accepted: true }, { accepted: false }],
+    },
+  },
+  {
+    type: "expense",
+    props: {
+      avatarSrc: "",
+      expenseDescription: "Utilities",
+      listName: "Office Expenses",
+      amount: 100,
+    },
   },
 ];
 
 export const Notification = () => (
   <div className="notifications-container">
-    <header className="notifications-header">
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ac0a0be7517c579248cdc79bc7da6e24d295c81d58f0b05e9f5a252d7127781?apiKey=9e09a71e3ebf486197b3397eee256a32&"
-        alt="Notifications icon"
-        className="notifications-icon"
-      />
-      <h2 className="notifications-title">Notifications</h2>
-    </header>
-    {mockNotifications.map((notification) => (
-      <NotificationItem {...notification} />
-    ))}
+    {notifications.map((notification, index) => {
+      if (notification.type === "expense") {
+        const { avatarSrc, expenseDescription, listName, amount } =
+          notification.props;
+        return (
+          <div className="notification-item" key={index}>
+            <NotificationExpense
+              avatarSrc={avatarSrc}
+              expenseDescription={expenseDescription}
+              listName={listName}
+              amount={amount}
+            />
+          </div>
+        );
+      } else if (notification.type === "invitation") {
+        const { avatarSrc, listName, responses } = notification.props;
+        return (
+          <div className="notification-item" key={index}>
+            <NotificationInvitation
+              avatarSrc={avatarSrc}
+              listName={listName}
+              responses={responses}
+            />
+          </div>
+        );
+      }
+      return null;
+    })}
   </div>
 );

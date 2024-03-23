@@ -1,0 +1,41 @@
+.notification-invitation {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.notification-invitation .accept-icon {
+    color: #2B9943;
+    background-color: #2B994320;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-invitation .cancel-icon {
+    color: #868686;
+    background-color: #86868610;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-invitee-avatars {
+    display: flex;
+    gap: 15px;
+}
+
+.notification-invitee-avatar {
+    height: 32px;
+    width: 32px;
+}
