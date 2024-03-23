@@ -16,5 +16,5 @@
 }
 
 .notifications-container .notification-item:nth-child(even) {
-    background-color: #edf2fc;
+    background-color: #EDF2FC50;
 }
