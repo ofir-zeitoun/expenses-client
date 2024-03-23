@@ -1,0 +1,17 @@
+.overview-section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    gap: 20px;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+

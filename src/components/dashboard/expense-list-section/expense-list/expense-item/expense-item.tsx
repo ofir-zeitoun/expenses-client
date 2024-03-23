@@ -1,8 +1,9 @@
 import { EditOutlined } from "@ant-design/icons";
-import UserPicture from "../../../shared/user-picture/user-picture";
-import { Expense } from "../../../../@types/expense";
-import { formatDate, formatTime } from "../../../utilities/format-time";
+
 import "./expense-item.css";
+import { Expense } from "../../../../../@types/expense";
+import { UserPicture } from "../../../../shared/user-picture/user-picture";
+import { formatDate, formatTime } from "../../../../utilities/format-time";
 
 export const ExpenseItem = ({
   expense,

@@ -1,5 +1,5 @@
+import { ExpenseLIstType } from "../../../../@types/expense-list-prop";
 import { ExpenseItem } from "./expense-item";
-import { ExpenseLIstType } from "../../../@types/expense-list-prop";
 import { ExpensesHeader } from "./expenses-header";
 import { ExpenseListHeader } from "./expense-list-header";
 import "./expense-list.css";
