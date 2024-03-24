@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SortOrder } from "../../@types/sortOrderTypes";
+import { SortOrder } from "../../../@types/sortOrderTypes";
 import ExpenseListToolbar from "./expense-list-toolbar/expense-list-toolbar";
 import { ExpenseList } from "./expense-list";
 import { useExpenseLists } from "./useExpenseLists";
@@ -17,7 +17,7 @@ export const ExpenseListSection = () => {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div>
+    <div className="expense-list-section">
       <div className="expense-list-container">
         <ExpenseListToolbar toggleSortOrder={toggleSortOrder} />
         {section?.data?.map((list) => (

@@ -1,5 +1,5 @@
 .expense-item.odd {
-    background-color: #EDF2FC50;
+    background-color: rgba(237, 242, 252, 0.5);
 }
 
 .expense-item.even {
@@ -8,20 +8,20 @@
 
 .expense-item {
     display: grid;
-    grid-template-columns: 25px 3fr 1fr 2fr 20px;
-    gap: 20px;
+    grid-template-columns: 1.5625rem 3fr 1fr 2fr 1.25rem;
+    gap: 1.25rem;
     align-items: center;
-    max-width: 652px;
-    padding: 12px 20px;
+    max-width: 40.75rem;
+    padding: 0.75rem 1.25rem;
     background-color: #edf2fc;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     color: #191919;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .expense-icon {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     object-fit: cover;
     justify-self: start;
 }
@@ -30,30 +30,30 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 .expense-title,
 .expense-location {
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #191919;
 }
 
 .expense-location {
     font-weight: 300;
-    font-size: 8px;
+    font-size: 0.5rem;
 }
 
 .expense-price {
     justify-self: center;
-    padding: 10px 20px;
-    background-color: #62b16a10;
+    padding: 0.625rem 1.25rem;
+    background-color: rgba(98, 177, 106, 0.1);
     color: #62b16a;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
 }
 
@@ -62,7 +62,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: right;
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 
 .edit-icon {
@@ -77,12 +77,12 @@
 }
 
 .expense-time {
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 
 .user-icon-wrapper {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     border-radius: 50%;
     background-color: #f0f0f0;
     justify-self: start;
@@ -92,7 +92,6 @@
 }
 
 .user-icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #888;
 }
-

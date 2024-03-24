@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { SortOrder } from "../../../../@types/sortOrderTypes";
-import { SortField } from "../../../../@types/sortField";
+
 import "./expenses-header.css";
+import { SortOrder } from "../../../../../@types/sortOrderTypes";
+import { SortField } from "../../../../../@types/sortField";
 
 export const ExpensesHeader = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>("desc");

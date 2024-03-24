@@ -1,16 +1,26 @@
+import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
-import { Expense } from "../../../@types/expense";
 import { apiFetch } from "../../../api";
-import { useEffect, useState } from "react";
+import { ExpenseLIstType } from "../../../@types/expense-list-prop";
 import { SortOrder } from "../../../@types/sortOrderTypes";
 
-async function fetchExpense(
+interface ExpenseListsResponse {
+  data: ExpenseLIstType[];
+  isLoading: boolean;
+  error: Error | null;
+  limit: number;
+  offset: number;
+  sortOrder: SortOrder;
+  total: number;
+}
+
+const fetchExpenseLists = async (
   token: string,
   offset: number,
   limit: number,
   sortOrder: SortOrder
-): Promise<Expense[]> {
+): Promise<ExpenseListsResponse> => {
   const init = {
     headers: {
       "Content-Type": "application/json",
@@ -19,7 +29,7 @@ async function fetchExpense(
   };
 
   return apiFetch(
-    `/api/expenses?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
+    `/mock/expense-lists?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
     init
   )
     .then((response) => {
@@ -28,14 +38,14 @@ async function fetchExpense(
       }
       return response.json();
     })
-    .then((data) => data as Expense[]);
-}
+    .then((data) => data as ExpenseListsResponse);
+};
 
-export const useExpense = (
+export const useExpenseLists = (
   offset: number,
   limit: number,
   sortOrder: SortOrder
-): UseQueryResult<Expense[], Error> => {
+): UseQueryResult<ExpenseListsResponse, Error> => {
   const [token, setToken] = useState("");
   const { getAccessTokenSilently } = useAuth0();
 
@@ -50,9 +60,9 @@ export const useExpense = (
     })();
   }, [getAccessTokenSilently, setToken]);
 
-  return useQuery<Expense[], Error>({
+  return useQuery<ExpenseListsResponse, Error>({
     enabled: !!token,
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
-    queryFn: () => fetchExpense(token, offset, limit, sortOrder),
+    queryFn: () => fetchExpenseLists(token, offset, limit, sortOrder),
   });
 };

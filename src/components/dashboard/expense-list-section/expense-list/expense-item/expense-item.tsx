@@ -1,18 +1,13 @@
 import { EditOutlined } from "@ant-design/icons";
-import UserPicture from "../../../shared/user-picture/user-picture";
-import { Expense } from "../../../../@types/expense";
-import { formatDate, formatTime } from "../../../utilities/format-time";
-import "./expense-item.css";
 
-export const ExpenseItem = ({
-  expense,
-  className,
-}: {
-  expense: Expense;
-  className?: string;
-}) => {
+import "./expense-item.css";
+import { Expense } from "../../../../../@types/expense";
+import { UserPicture } from "../../../../shared/user-picture/user-picture";
+import { formatDate, formatTime } from "../../../../utilities/format-time";
+
+export const ExpenseItem = ({ expense }: { expense: Expense }) => {
   return (
-    <div className={`expense-item ${className}`}>
+    <div className={`expense-item`}>
       <UserPicture creatorImageUrl={expense.creatorImageUrl} />
       <div className="expense-details">
         <div className="expense-title">{expense.name}</div>
