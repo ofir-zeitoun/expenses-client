@@ -1,12 +1,7 @@
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { UserPicture } from "../../../../shared/user-picture";
+import { InvitationNotificationProps } from "../../../../../@types/notification";
 import "./notification-Invitation.css";
-
-interface InvitationNotificationProps {
-  avatarSrc: string;
-  listName: string;
-  responses: { accepted: boolean }[];
-}
 
 export function NotificationInvitation({
   avatarSrc,

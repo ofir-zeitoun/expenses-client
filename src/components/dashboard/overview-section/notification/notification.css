@@ -1,18 +1,17 @@
 .notification {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
-    padding: 20px;
+    padding: 1.25rem;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     background-color: #fff;
     width: 100%;
 }
 
 .notifications-container {
-
-    padding: 0px 20px;
+    padding: 0 1.25rem;
 }
 
 .notifications-container .notification-item:nth-child(even) {

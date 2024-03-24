@@ -1,27 +1,25 @@
 .notification-expense {
     align-items: center;
     display: flex;
-    gap: 20px;
-    border-radius: 5px;
-    padding: 20px;
+    gap: 1.25rem;
+    border-radius: 0.3125rem;
+    padding: 1.25rem;
 }
 
 .notifications-icon {
-    height: 24px;
-    width: 24px;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .notifications-title {
     color: #191919;
-    font: 700 18px Nunito, sans-serif;
+    font: 700 1.125rem Nunito, sans-serif;
     margin: 0;
 }
 
-
-
 .notification-avatar {
-    height: 30px;
-    width: 30px;
+    height: 1.875rem;
+    width: 1.875rem;
 }
 
 .notification-content {
@@ -33,7 +31,7 @@
 
 .notification-description {
     color: #191919;
-    font: 400 14px Nunito, sans-serif;
+    font: 400 0.875rem Nunito, sans-serif;
     margin: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -42,9 +40,9 @@
 
 .notification-amount {
     background-color: #62b16a;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     color: #fff;
-    font: 700 12px Nunito, sans-serif;
-    padding: 10px 17px;
+    font: 700 0.75rem Nunito, sans-serif;
+    padding: 0.625rem 1.0625rem;
     text-align: center;
 }

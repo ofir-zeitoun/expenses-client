@@ -1,10 +1,17 @@
 .expenses-list {
-    border-radius: 10px;
-    padding: 20px 20px;
+    border-radius: 0.625rem;
+    padding: 1.25rem 1.25rem;
     background: #FFFFFF;
     box-shadow: 2px 2px 2px 4px rgb(201 203 205 / 10%);
-    border-radius: 10px;
+    border-radius: 0.625rem;
+}
 
+.expenses-list .expense-item:nth-child(odd) {
+    background-color: #EDF2FC50;
+}
+
+.expenses-list .expense-item:nth-child(even) {
+    background-color: #FFFFFF;
 }
 
 .sperated-expenses-list {

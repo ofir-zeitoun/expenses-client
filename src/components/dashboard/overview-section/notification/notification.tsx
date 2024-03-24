@@ -1,24 +1,7 @@
-import React from "react";
-import "./notification.css";
 import { NotificationExpense } from "./notification-expense";
 import { NotificationInvitation } from "./notification-invitation";
-
-type NotificationType =
-  | { type: "expense"; props: NotificationExpenseProps }
-  | { type: "invitation"; props: NotificationInvitationProps };
-
-interface NotificationExpenseProps {
-  avatarSrc: string;
-  expenseDescription: string;
-  listName: string;
-  amount: number;
-}
-
-interface NotificationInvitationProps {
-  avatarSrc: string;
-  listName: string;
-  responses: { accepted: boolean }[];
-}
+import { NotificationType } from "../../../../@types/notification";
+import "./notification.css";
 
 const notifications: NotificationType[] = [
   {

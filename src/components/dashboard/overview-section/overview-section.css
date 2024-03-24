@@ -2,13 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .stats-cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
     justify-content: center;
     box-sizing: border-box;
     width: 90%;
@@ -18,6 +18,6 @@
     box-shadow: 2px 2px 2px 4px rgba(201, 203, 205, 0.1);
     width: 90%;
     height: 52vh;
-    border-radius: 10px;
-    margin-top: -4px;
+    border-radius: 0.625rem;
+    margin-top: -0.25rem;
 }

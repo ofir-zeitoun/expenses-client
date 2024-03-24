@@ -1,12 +1,6 @@
+import { NotificationExpenseProps } from "../../../../../@types/notification";
 import { UserPicture } from "../../../../shared/user-picture";
 import "./notification-expense.css";
-
-interface NotificationExpenseProps {
-  avatarSrc: string;
-  expenseDescription: string;
-  listName: string;
-  amount: number;
-}
 
 export const NotificationExpense = ({
   avatarSrc,

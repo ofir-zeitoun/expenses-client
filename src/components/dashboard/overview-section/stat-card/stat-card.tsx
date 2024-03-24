@@ -1,13 +1,6 @@
-import React, { ReactNode } from "react";
 import { UserOutlined } from "@ant-design/icons";
+import { StatCardProps } from "../../../../@types/stats";
 import "./stat-card.css";
-
-interface StatCardProps {
-  icon?: ReactNode; // Accept a ReactNode for icons
-  imageSrc?: string; // Make imageSrc optional
-  value: string;
-  label: string;
-}
 
 export const StatCard = ({
   icon = <UserOutlined />,

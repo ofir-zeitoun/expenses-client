@@ -1,79 +1,71 @@
 .expense-list-header {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: space-between;
     align-items: center;
-    font: 700 18px Nunito, sans-serif;
+    font: 700 1.125rem Nunito, sans-serif;
 }
 
-.expense-list-header {
+.list-name {
+    color: #191919;
+    margin: 0;
+}
 
-    .list-name {
-        color: #191919;
-        margin: 0;
-    }
+.list-header-actions {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1rem;
+    white-space: nowrap;
+}
 
-    .list-header-actions {
-        display: flex;
-        gap: 20px;
-        font-size: 16px;
-        white-space: nowrap;
+.total-amount {
+    color: #2b9943;
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    margin-right: 1.75rem;
+}
 
-    }
+.list-filters {
+    display: flex;
+    gap: 1.25rem;
+    font-weight: 400;
+    align-items: center;
+}
 
-    .total-amount {
-        color: #2b9943;
-        font-family: Nunito, sans-serif;
-        font-weight: 700;
-        margin-right: 28px;
+.filter-button,
+.sort-button {
+    color: #191919;
+    font-family: Nunito, sans-serif;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
 
-    }
+.sort-button:focus,
+.filter-button:focus {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+}
 
-    .list-filters {
-        display: flex;
-        gap: 20px;
-        font-weight: 400;
-        align-items: center;
-    }
+.sort-button {
+    color: #5b93ff;
+}
 
-    .filter-button,
-    .sort-button {
-        color: #191919;
-        font-family: Nunito, sans-serif;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-    }
+.list-options-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
 
-
-    .sort-button:focus,
-    .filter-button:focus {
-        background-color: Transparent;
-        background-repeat: no-repeat;
-        border: none;
-        outline: none;
-    }
-
-
-    .sort-button {
-        color: #5b93ff;
-    }
-
-    .list-options-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .list-divider {
-        border: 1px solid rgba(0, 25, 48, 1);
-        background-color: #001930;
-        margin-top: 59px;
-        width: 100%;
-    }
-
+.list-divider {
+    border: 1px solid rgba(0, 25, 48, 1);
+    background-color: #001930;
+    margin-top: 3.6875rem;
+    width: 100%;
 }
 
 .menu-Remove {
-    color: "red"
+    color: "red";
 }

@@ -5,11 +5,11 @@ import {
   DollarCircleOutlined,
   CreditCardOutlined,
 } from "@ant-design/icons";
+import { NotificationHeader } from "./notification/notification-header";
 import { useStats } from "./useStats";
 import { StatCard } from "./stat-card";
-import "./overview-section.css";
-import { NotificationHeader } from "./notification/notification-header";
 import { Notification } from "./notification";
+import "./overview-section.css";
 
 export const OverviewSection = () => {
   const { data: stats, isLoading, error } = useStats();
