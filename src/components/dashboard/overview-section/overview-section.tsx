@@ -16,8 +16,8 @@ export const OverviewSection = () => {
 
   return (
     <SuspenseComponent isLoading={isLoading} error={error}>
-      <SuspenseComponent.Loading> Loading... </SuspenseComponent.Loading>
-      <SuspenseComponent.Error> ERROR... </SuspenseComponent.Error>
+      <SuspenseComponent.Loading> </SuspenseComponent.Loading>
+      <SuspenseComponent.Error> </SuspenseComponent.Error>
       <div className="overview-section">
         <div className="stats-cards">
           <StatCard
