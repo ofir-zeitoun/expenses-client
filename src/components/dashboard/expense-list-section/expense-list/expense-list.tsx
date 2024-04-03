@@ -13,9 +13,9 @@ export const ExpenseList = ({ list }: { list: ExpenseLIstType }) => {
       />
       <ExpensesHeader />
       <div className="sperated-expenses-list" />
-      {list.expenses?.map((expense) => (
-        <ExpenseItem key={expense._id} expense={expense} />
-      ))}
+        {list.expenses?.map((expense) => (
+          <ExpenseItem key={expense._id} expense={expense} />
+        ))}
       <div></div>
     </div>
   );
