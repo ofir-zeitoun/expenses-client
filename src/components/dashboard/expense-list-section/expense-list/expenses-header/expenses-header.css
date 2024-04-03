@@ -27,7 +27,6 @@
     cursor: pointer;
     justify-self: end;
     width: 0.375rem;
-    /* Adjusted based on your last specification */
 }
 
 .expenses-header-participant-label,
