@@ -9,7 +9,7 @@ function App() {
   return (
     <QueryWrapper>
       <NavBar />
-      <div>
+      <div className="main-content">
         {isAuthenticated ? (
           <Dashboard />
         ) : (

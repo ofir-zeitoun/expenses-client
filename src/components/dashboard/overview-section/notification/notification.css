@@ -1,0 +1,24 @@
+.notification {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    justify-content: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    border-radius: 0.625rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+.notifications-container {
+    padding: 0 1.25rem 1rem 1.25rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 0vh;
+}
+
+.notifications-container .notification-item:nth-child(even) {
+    background-color: #EDF2FC50;
+}
+
+.notifications-item {}

@@ -1,10 +1,18 @@
 .dashboard {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    padding: 1.25rem 0;
+    height: 100%;
 }
 
-.overview-section,
+.overview-section {
+    width: 48%;
+    height: 100%;
+    max-height: calc(100vh - 7.5rem);
+}
+
 .expense-list-section {
     width: 48%;
+    height: 100%;
+
 }

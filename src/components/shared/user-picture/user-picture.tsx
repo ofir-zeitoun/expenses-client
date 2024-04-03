@@ -1,6 +1,11 @@
 import { UserOutlined } from "@ant-design/icons";
 import "./user-picture.css";
-const UserPicture = ({ creatorImageUrl }: { creatorImageUrl?: string }) => {
+
+type Props = {
+  creatorImageUrl?: string;
+};
+
+export const UserPicture = ({ creatorImageUrl }: Props) => {
   return creatorImageUrl ? (
     <img className="expense-icon" src={creatorImageUrl} alt="Creator" />
   ) : (
@@ -9,5 +14,3 @@ const UserPicture = ({ creatorImageUrl }: { creatorImageUrl?: string }) => {
     </div>
   );
 };
-
-export default UserPicture;

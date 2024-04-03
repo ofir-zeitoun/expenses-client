@@ -1,0 +1,13 @@
+.notifications-header {
+    align-items: center;
+    display: flex;
+    gap: 0.875rem;
+    margin-left: 0.8125rem;
+    padding: 1.5rem 1.25rem 0rem 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.notifications-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}

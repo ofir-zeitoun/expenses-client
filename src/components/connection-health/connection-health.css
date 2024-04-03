@@ -1,5 +1,5 @@
 .connection-wrapper {
-    padding-right: 70px;
+    padding-right: 5rem;
 }
 
 .connection {
@@ -7,7 +7,7 @@
     height: 1rem;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .connected {
