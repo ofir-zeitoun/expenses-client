@@ -1,6 +1,6 @@
 import { OverviewSection } from "./overview-section";
-import "./dashboard.css";
 import { ExpenseListSection } from "./expense-list-section";
+import "./dashboard.css";
 
 export const Dashboard = () => {
   return (

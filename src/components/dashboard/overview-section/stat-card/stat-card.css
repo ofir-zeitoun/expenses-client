@@ -4,7 +4,7 @@
     display: flex;
     gap: 1.25rem;
     padding: 1.75rem 2.0625rem;
-    box-shadow: 2px 2px 2px 4px rgba(201, 203, 205, 0.1);
+    box-shadow: 0.0625rem 0.25rem 2.5rem #E6EAEF;
     align-items: center;
 }
 

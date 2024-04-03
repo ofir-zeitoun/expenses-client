@@ -60,7 +60,7 @@
 }
 
 .list-divider {
-    border: 1px solid rgba(0, 25, 48, 1);
+    border: 0.0625rem solid rgba(0, 25, 48, 1);
     background-color: #001930;
     margin-top: 3.6875rem;
     width: 100%;

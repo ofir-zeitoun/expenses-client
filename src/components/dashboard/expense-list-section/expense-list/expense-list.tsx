@@ -9,7 +9,7 @@ export const ExpenseList = ({ list }: { list: ExpenseLIstType }) => {
     <div className="expenses-list">
       <ExpenseListHeader
         listName={list.name}
-        expenseTotal={list.expenseTotal.toFixed(2)}
+        expenseTotal={parseFloat(list.expenseTotal).toFixed(2)}
       />
       <ExpensesHeader />
       <div className="sperated-expenses-list" />

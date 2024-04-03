@@ -2,7 +2,7 @@
     border-radius: 0.625rem;
     padding: 1.25rem 1.25rem;
     background: #FFFFFF;
-    box-shadow: 2px 2px 2px 4px rgb(201 203 205 / 10%);
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.25rem rgb(201 203 205 / 10%);
     border-radius: 0.625rem;
 }
 
@@ -16,5 +16,5 @@
 
 .sperated-expenses-list {
     opacity: 0.05;
-    border: 1px solid #001930;
+    border: 0.0625rem solid #001930;
 }

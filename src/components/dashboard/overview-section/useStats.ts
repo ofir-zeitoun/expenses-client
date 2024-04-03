@@ -3,7 +3,6 @@ import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { apiFetch } from "../../../api";
 
-// Assuming this is the structure of the stats data returned from the backend
 interface Stats {
   totalUsers: number;
   totalLists: number;

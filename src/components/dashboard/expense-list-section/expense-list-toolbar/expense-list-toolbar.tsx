@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import "./expense-list-toolbar.css";
 

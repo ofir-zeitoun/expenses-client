@@ -1,17 +1,8 @@
-.expense-item.odd {
-    background-color: rgba(237, 242, 252, 0.5);
-}
-
-.expense-item.even {
-    background-color: #FFFFFF;
-}
-
 .expense-item {
     display: grid;
     grid-template-columns: 1.5625rem 3fr 1fr 2fr 1.25rem;
     gap: 1.25rem;
     align-items: center;
-    max-width: 40.75rem;
     padding: 0.75rem 1.25rem;
     background-color: #edf2fc;
     border-radius: 0.3125rem;

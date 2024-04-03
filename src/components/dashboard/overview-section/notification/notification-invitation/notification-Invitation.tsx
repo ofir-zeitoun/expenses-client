@@ -1,5 +1,5 @@
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
-import { UserPicture } from "../../../../shared/user-picture";
+import { UserPicture } from "../../../../shared";
 import { InvitationNotificationProps } from "../../../../../@types/notification";
 import "./notification-Invitation.css";
 

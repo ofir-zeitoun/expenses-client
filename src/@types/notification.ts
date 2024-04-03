@@ -4,6 +4,7 @@ export type NotificationType =
   | { type: "invitation"; props: NotificationInvitationProps };
 
 export interface NotificationExpenseProps {
+  id: string;
   avatarSrc: string;
   expenseDescription: string;
   listName: string;
@@ -11,6 +12,7 @@ export interface NotificationExpenseProps {
 }
 
 export interface NotificationInvitationProps {
+  id: string;
   avatarSrc: string;
   listName: string;
   responses: { accepted: boolean }[];

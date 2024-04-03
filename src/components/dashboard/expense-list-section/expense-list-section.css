@@ -1,5 +1,5 @@
 .expense-list-container {
-    max-height: calc(100vh - 9.375rem);
+    max-height: calc(100vh - 9rem);
     overflow-y: auto;
     display: flex;
     flex-direction: column;

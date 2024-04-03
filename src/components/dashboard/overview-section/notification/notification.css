@@ -11,9 +11,14 @@
 }
 
 .notifications-container {
-    padding: 0 1.25rem;
+    padding: 0 1.25rem 1rem 1.25rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 0vh;
 }
 
 .notifications-container .notification-item:nth-child(even) {
     background-color: #EDF2FC50;
 }
+
+.notifications-item {}

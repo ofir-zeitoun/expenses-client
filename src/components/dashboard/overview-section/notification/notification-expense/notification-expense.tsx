@@ -1,5 +1,5 @@
 import { NotificationExpenseProps } from "../../../../../@types/notification";
-import { UserPicture } from "../../../../shared/user-picture";
+import { UserPicture } from "../../../../shared";
 import "./notification-expense.css";
 
 export const NotificationExpense = ({
