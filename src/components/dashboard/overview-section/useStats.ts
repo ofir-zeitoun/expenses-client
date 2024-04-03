@@ -18,14 +18,12 @@ async function fetchStats(token: string): Promise<Stats> {
     },
   };
 
-  return apiFetch(`/mock/stats`, init)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => data as Stats);
+  return apiFetch(`/mock/stats`, init).then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  });
 }
 
 export const useStats = (): UseQueryResult<Stats, Error> => {

@@ -17,16 +17,3 @@ export interface NotificationInvitationProps {
   listName: string;
   responses: { accepted: boolean }[];
 }
-
-export interface InvitationNotificationProps {
-  avatarSrc: string;
-  listName: string;
-  responses: { accepted: boolean }[];
-}
-
-export interface NotificationExpenseProps {
-  avatarSrc: string;
-  expenseDescription: string;
-  listName: string;
-  amount: number;
-}
