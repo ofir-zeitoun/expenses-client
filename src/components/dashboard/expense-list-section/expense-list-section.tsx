@@ -16,7 +16,6 @@ export const ExpenseListSection = () => {
 
   return (
     <SuspenseComponent isLoading={isLoading} error={error}>
-      {/* <SuspenseComponent.Loading> </SuspenseComponent.Loading> */}
       <div className="expense-list-section">
         <div className="expense-list-container">
           <ExpenseListToolbar toggleSortOrder={toggleSortOrder} />
