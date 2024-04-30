@@ -8,6 +8,7 @@ import {
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
 import "./nav-bar.css";
+import { ThemeSwitcher } from "../theme-switcher";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
@@ -38,6 +39,7 @@ export const NavBar = () => {
       <div className="left-nav">
         <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
         <span className="app-name">Expenses Dashboard</span>
+        <ThemeSwitcher/>
       </div>
       <div className="right-nav">
         <div className="ConnectionHealth">
