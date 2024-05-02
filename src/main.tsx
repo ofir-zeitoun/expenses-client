@@ -4,8 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Auth0ProviderWithNavigate } from "./components/utilities";
 import App from "./App";
 import "./index.css";
-import "./light-theme.css";
-import "./dark-theme.css";
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
