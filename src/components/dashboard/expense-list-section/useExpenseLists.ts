@@ -29,7 +29,7 @@ const fetchExpenseLists = async (
   };
 
   return apiFetch(
-    `/mock/expense-lists?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
+    `/api/expense-lists?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
     init
   )
     .then((response) => {
