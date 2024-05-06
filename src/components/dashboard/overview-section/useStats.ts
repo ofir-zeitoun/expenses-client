@@ -18,7 +18,7 @@ async function fetchStats(token: string): Promise<Stats> {
     },
   };
 
-  return apiFetch(`/mock/stats`, init).then((response) => {
+  return apiFetch(`/api/stats`, init).then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
