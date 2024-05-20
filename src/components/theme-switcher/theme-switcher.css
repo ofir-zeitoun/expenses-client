@@ -7,7 +7,7 @@
 label {
     font-size: 0.8125rem;
     /* 13px / 16px (default font-size) */
-    color: var(--font-color);
+    color: var(--text-color-on-background);
     font-weight: 500;
 }
 
@@ -20,8 +20,9 @@ label {
         margin: 0;
         width: 8.75rem;
         height: 1.875rem;
-        background: var(--bg-container);
-        border-radius: 1.625rem;
+        background: var(--background);
+        box-shadow: 4px 4px 12px 0px rgba(0,0,0,0.75);
+        border-radius: 1.725rem;
         overflow: hidden;
         position: relative;
         transition: all 0.3s ease;
@@ -64,7 +65,7 @@ label {
     input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
         content: attr(data-on);
         left: 4.25rem;
-        background: var(--bg-button-disable);
+        background: var(--primary-btn-disabled);
     }
 
     input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {

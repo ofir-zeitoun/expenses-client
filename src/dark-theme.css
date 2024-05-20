@@ -1,39 +1,25 @@
-:root {
-    /* Primary colors */
-    --ant-primary-color: #1890ff;
-    --ant-primary-color-hover: #40a9ff;
-    --ant-primary-color-active: #096dd9;
-    --ant-primary-color-outline: #91d5ff;
+[data-theme="dark"] {
+  --background:#1E2631;
+
+
+  --text-color-on-background:#FFFFFF;
+  --logo-color-on-background:#8095B2;
+  --muted-text-color-on-background:rgba(255, 255, 255,0.7);
+
+  --yellow-icon-background:#FFD66B;
+  --yellow-icon-color:#F5C451;
+  --green-icon-background:#68CC58;
+  --green-icon-color:#62B16A;
+
+  --cash-green-text-color:#62B16A;
+  --aqua-text-color:#5B93FF;
   
-    /* Background colors */
-    --ant-bg-color-light: #303030; /* Lighter background for dark theme */
-    --ant-bg-color-base: #222222; /* Base background color for dark theme */
-    --ant-bg-color-dark: #1a1a1a; /* Darker background for dark theme */
-    --ant-bg-color-inverse: #ffffff; /* Inverse color for contrast */
-  
-    /* Text colors */
-    --ant-text-color: #e0e0e0; /* Light text color for dark background */
-    --ant-text-color-secondary: #a9a9a9; /* Secondary text color */
-    --ant-text-color-inverse: #000000; /* Inverse text color for contrast */
-    --ant-heading-color: #c0c0c0; /* Heading color in dark theme */
-  
-    /* Link colors */
-    --ant-link-color: #1890ff;
-    --ant-link-hover-color: #40a9ff;
-    --ant-link-active-color: #096dd9;
-    --ant-link-decoration: none;
-    --ant-link-hover-decoration: underline;
-  
-    /* Shadow colors */
-    --ant-shadow-color: rgba(255, 255, 255, 0.15); /* Lighter shadow for dark theme */
-    --ant-shadow-color-inverse: #000000; /* Inverse shadow color */
-  
-    /* Alert and success colors */
-    --ant-success-color: #52c41a;
-    --ant-warning-color: #faad14;
-    --ant-error-color: #ff4d4f;
-    --ant-info-color: #1890ff;
-  
-    /* Additional adjustments can be added here */
-  }
-  
+  --table-odd-row-background:#2C3343;
+
+  --primary-btn-active:#141A22;
+  --primary-btn-disabled:#2D3541;
+
+  --text-on-primary-btn-active:#FFFFFF;
+  --text-on-primary-btn-disabled:rgba(255, 255, 255,0.8);
+
+}
