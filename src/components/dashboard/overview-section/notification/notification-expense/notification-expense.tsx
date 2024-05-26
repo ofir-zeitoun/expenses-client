@@ -6,7 +6,7 @@ export const NotificationExpense = ({
   avatarSrc,
   expenseDescription,
   listName,
-  amount,
+  price,
 }: NotificationExpenseProps) => {
   return (
     <div className="notification-expense">
@@ -16,7 +16,7 @@ export const NotificationExpense = ({
           Added a new <strong>{expenseDescription}</strong> to{" "}
           <strong>{listName}</strong>
         </p>
-        <div className="notification-amount">${amount}</div>
+        <div className="notification-price">${price}</div>
       </div>
     </div>
   );

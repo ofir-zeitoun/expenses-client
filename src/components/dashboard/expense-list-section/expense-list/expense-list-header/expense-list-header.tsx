@@ -10,9 +10,11 @@ import "./expense-list-header.css";
 export const ExpenseListHeader = ({
   listName,
   expenseTotal,
+  toggleSortOrder,
 }: {
   listName: string;
   expenseTotal: string;
+  toggleSortOrder: () => void;
 }) => {
   const items = [
     {
@@ -38,8 +40,10 @@ export const ExpenseListHeader = ({
     <div className="expense-list-header">
       <h2 className="list-name">{listName || "List"}</h2>
       <div className="list-header-actions">
-        <div className="total-amount">{expenseTotal + "$" || "0"}</div>
-        <button className="sort-button">Sort</button>
+        <div className="total-price">{expenseTotal + "$" || "0"}</div>
+        <button className="sort-button" onClick={toggleSortOrder}>
+          Sort
+        </button>
         <div className="list-options-icon">
           <Dropdown
             menu={{ items }}

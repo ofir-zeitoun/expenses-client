@@ -9,15 +9,15 @@ import { useStats } from "./useStats";
 import { StatCard } from "./stat-card";
 import { Notification } from "./notification";
 import "./overview-section.css";
-import { SuspenseComponent } from "../../shared";
+import { DataLoader } from "../../shared";
 
 export const OverviewSection = () => {
   const { data: stats, isLoading, error } = useStats();
 
   return (
-    <SuspenseComponent isLoading={isLoading} error={error}>
-      <SuspenseComponent.Loading> </SuspenseComponent.Loading>
-      <SuspenseComponent.Error> </SuspenseComponent.Error>
+    <DataLoader isLoading={isLoading} error={error}>
+      <DataLoader.Loading> </DataLoader.Loading>
+      <DataLoader.Error> </DataLoader.Error>
       <div className="overview-section">
         <div className="stats-cards">
           <StatCard
@@ -38,7 +38,7 @@ export const OverviewSection = () => {
           />
           <StatCard
             icon={<DollarCircleOutlined />}
-            value={`$${stats?.totalAmount?.toFixed(2) ?? "N/A"}`}
+            value={`$${stats?.totalPrice?.toFixed(2) ?? "N/A"}`}
             label="Total Price"
           />
         </div>
@@ -47,7 +47,7 @@ export const OverviewSection = () => {
           <Notification />
         </div>
       </div>
-    </SuspenseComponent>
+    </DataLoader>
   );
 };
 

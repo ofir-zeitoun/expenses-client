@@ -8,7 +8,7 @@ export interface NotificationExpenseProps {
   avatarSrc: string;
   expenseDescription: string;
   listName: string;
-  amount: number;
+  price: number;
 }
 
 export interface NotificationInvitationProps {

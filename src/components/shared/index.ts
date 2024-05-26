@@ -1,2 +1,2 @@
-export * from "./suspense-component";
+export * from "./DataLoader";
 export * from "./user-picture";

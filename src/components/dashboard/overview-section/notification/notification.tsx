@@ -11,7 +11,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Coffee",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
   {
@@ -30,7 +30,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Groceries",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
   {
@@ -49,7 +49,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Utilities",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
   {
@@ -77,7 +77,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Coffee",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
   {
@@ -96,7 +96,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Groceries",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
   {
@@ -115,7 +115,7 @@ const notifications: NotificationType[] = [
       avatarSrc: "",
       expenseDescription: "Utilities",
       listName: "Office Expenses",
-      amount: 100,
+      price: 100,
     },
   },
 ];
@@ -124,7 +124,7 @@ export const Notification = () => (
   <div className="notifications-container">
     {notifications.map((notification) => {
       if (notification.type === "expense") {
-        const { id, avatarSrc, expenseDescription, listName, amount } =
+        const { id, avatarSrc, expenseDescription, listName, price } =
           notification.props;
         return (
           <div className="notification-item" key={id}>
@@ -133,7 +133,7 @@ export const Notification = () => (
               avatarSrc={avatarSrc}
               expenseDescription={expenseDescription}
               listName={listName}
-              amount={amount}
+              price={price}
             />
           </div>
         );
