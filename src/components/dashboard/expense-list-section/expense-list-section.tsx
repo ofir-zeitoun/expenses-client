@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { SortOrder } from "../../../@types/sortOrderTypes";
-
-import { ExpenseLIstType } from "../../../@types/expense-list-prop";
-import { DataLoader } from "../../shared";
 import ExpenseListToolbar from "./expense-list-toolbar/expense-list-toolbar";
 import { ExpenseList } from "./expense-list/expense-list";
-import { useExpenseLists } from "./useExpenseLists";
 import "./expense-list-section.css";
+import { ExpenseLIstType } from "../../../@types/expense-list-prop";
+import { useExpenseLists } from "./useExpenseLists";
+import { DataLoader } from "../../shared/DataLoader";
 
 export const ExpenseListSection = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
@@ -20,11 +19,9 @@ export const ExpenseListSection = () => {
 
   const updateLists = useCallback(() => {
     if (section?.data) {
-      if (offset === 0) {
-        setLists(section.data);
-      } else {
-        setLists((prevLists) => [...prevLists, ...section.data]);
-      }
+      setLists((prevLists) =>
+        offset === 0 ? section.data : [...prevLists, ...section.data]
+      );
     }
   }, [section, offset]);
 
@@ -33,7 +30,7 @@ export const ExpenseListSection = () => {
   }, [updateLists]);
 
   const toggleSortOrder = () => {
-    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    setSortOrder((prevSortOrder) => (prevSortOrder === "asc" ? "desc" : "asc"));
     setOffset(0);
     setLists([]);
   };
