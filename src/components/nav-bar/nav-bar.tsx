@@ -7,6 +7,7 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
+import { ThemeSwitcher } from "../theme-switcher";
 import "./nav-bar.css";
 
 export const NavBar = () => {
@@ -38,6 +39,7 @@ export const NavBar = () => {
       <div className="left-nav">
         <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
         <span className="app-name">Expenses Dashboard</span>
+        <ThemeSwitcher/>
       </div>
       <div className="right-nav">
         <div className="ConnectionHealth">
