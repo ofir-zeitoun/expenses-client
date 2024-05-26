@@ -1,39 +1,25 @@
-
 :root {
+  --background:#FFFFFF;
 
-    --ant-primary-color: #1890ff;
-    --ant-primary-color-hover: #40a9ff;
-    --ant-primary-color-active: #096dd9;
-    --ant-primary-color-outline: #91d5ff;
-  
 
-    --ant-bg-color-light: #f5f5f5;
-    --ant-bg-color-base: #ffffff;
-    --ant-bg-color-dark: #f0f0f0;
-    --ant-bg-color-inverse: #000000;
-  
+  --text-color-on-background:#191919;
+  --logo-color-on-background:#456085;
+  --muted-text-color-on-background:#191919B3;
 
-    --ant-text-color: #000000;
-    --ant-text-color-secondary: #595959;
-    --ant-text-color-inverse: #ffffff;
-    --ant-heading-color: #000000;
-  
+  --yellow-icon-background:#FFD66B;
+  --yellow-icon-color:#F5C451;
+  --green-icon-background:#68CC58;
+  --green-icon-color:#62B16A;
 
-    --ant-link-color: #1890ff;
-    --ant-link-hover-color: #40a9ff;
-    --ant-link-active-color: #096dd9;
-    --ant-link-decoration: none;
-    --ant-link-hover-decoration: underline;
-  
-  
-    --ant-shadow-color: rgba(0, 0, 0, 0.15);
-    --ant-shadow-color-inverse: #ffffff;
-  
- 
-    --ant-success-color: #52c41a;
-    --ant-warning-color: #faad14;
-    --ant-error-color: #ff4d4f;
-    --ant-info-color: #1890ff;
-  
-    
-  }
+  --cash-green-text-color:#59AC4C;
+  --aqua-text-color:#5B93FF;
+
+  --table-odd-row-background:#EDF2FC;
+
+  --primary-btn-active:#425B7B;
+  --primary-btn-disabled:#EBF0F7;
+
+  --text-on-primary-btn-active:#FFFFFF;
+  --text-on-primary-btn-disabled:#425B7B;
+
+}
