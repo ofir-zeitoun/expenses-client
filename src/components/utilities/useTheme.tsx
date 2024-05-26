@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 type ThemeMode = "dark" | "light";
 
-export const useTheme = (): [ThemeMode, (newTheme: ThemeMode) => void] => {
+export const useTheme = (): [ThemeMode, (newTheme: ThemeMode) => void , ()=>void] => {
     const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem("currentTheme") as ThemeMode || (isSystemDark ? "dark" : "light");
     const [currentTheme, setCurrentTheme] = useState<ThemeMode>(savedTheme);
@@ -16,5 +16,8 @@ export const useTheme = (): [ThemeMode, (newTheme: ThemeMode) => void] => {
         localStorage.setItem("currentTheme", newTheme);
     };
 
-    return [currentTheme, handleSetTheme];
+    const toggleTheme = () =>{
+        handleSetTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    }
+    return [currentTheme, handleSetTheme,toggleTheme];
 };

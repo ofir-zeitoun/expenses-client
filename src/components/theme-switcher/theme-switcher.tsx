@@ -3,11 +3,7 @@ import { useTheme } from '../utilities/useTheme';
 
 
 export const ThemeSwitcher = () => {
-  const [currentTheme, setCurrentTheme] = useTheme();
-
-  const handleSwitchTheme = () => {
-    setCurrentTheme(currentTheme === 'dark' ? 'light' : 'dark');
-  };
+  const [currentTheme,,toggleTheme] = useTheme();
 
   return (
     <div className="btn-container">
@@ -15,7 +11,7 @@ export const ThemeSwitcher = () => {
         <input
           type="checkbox"
           id="toggle"
-          onChange={handleSwitchTheme}
+          onChange={toggleTheme}
           checked={currentTheme === 'dark'}
         />
         <label htmlFor="toggle" data-on="Dark" data-off="Light" className="btn-color-mode-switch-inner"></label>
