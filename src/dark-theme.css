@@ -4,7 +4,7 @@
 
   --text-color-on-background:#FFFFFF;
   --logo-color-on-background:#8095B2;
-  --muted-text-color-on-background:rgba(255, 255, 255,0.7);
+  --muted-text-color-on-background:#FFFFFFB3;
 
   --yellow-icon-background:#FFD66B;
   --yellow-icon-color:#F5C451;
@@ -20,6 +20,6 @@
   --primary-btn-disabled:#2D3541;
 
   --text-on-primary-btn-active:#FFFFFF;
-  --text-on-primary-btn-disabled:rgba(255, 255, 255,0.8);
+  --text-on-primary-btn-disabled:#FFFFFFCC;
 
 }
