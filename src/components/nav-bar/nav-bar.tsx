@@ -7,8 +7,8 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
-import "./nav-bar.css";
 import { ThemeSwitcher } from "../theme-switcher";
+import "./nav-bar.css";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
