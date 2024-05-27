@@ -1,22 +1,22 @@
-import './theme-switcher.css';
-import { useTheme } from '../utilities/useTheme';
-
+import React from "react";
+import { Switch } from "antd";
+import { SunOutlined, MoonOutlined } from "@ant-design/icons";
+import "./theme-switcher.css";
+import { useTheme } from "../utilities/useTheme";
 
 export const ThemeSwitcher = () => {
-  const [currentTheme,,toggleTheme] = useTheme();
+  const [currentTheme, , toggleTheme] = useTheme();
 
   return (
     <div className="btn-container">
-      <label className="btn-color-mode-switch">
-        <input
-          type="checkbox"
-          id="toggle"
-          onChange={toggleTheme}
-          checked={currentTheme === 'dark'}
-        />
-        <label htmlFor="toggle" data-on="Dark" data-off="Light" className="btn-color-mode-switch-inner"></label>
-      </label>
+      <Switch
+        checked={currentTheme === "dark"}
+        onChange={toggleTheme}
+        checkedChildren={<SunOutlined />}
+        unCheckedChildren={<MoonOutlined />}
+      />
     </div>
   );
 };
 
+export default ThemeSwitcher;

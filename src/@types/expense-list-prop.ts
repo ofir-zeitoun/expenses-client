@@ -1,7 +1,7 @@
 import { Expense } from "./expense";
 
 export type ExpenseLIstType = {
-  expenseTotal: string;
+  totalExpenses: string;
   _id: string;
   name: string;
   creator: string;

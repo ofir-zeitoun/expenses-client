@@ -1,15 +1,15 @@
 .stat-card {
     border-radius: 0.625rem;
-    background-color: #fff;
+
     display: flex;
     gap: 1.25rem;
     padding: 1.75rem 2.0625rem;
-    box-shadow: 0.0625rem 0.25rem 2.5rem #E6EAEF;
+    box-shadow: 0.0625rem 0.25rem 2.5rem var(--box-shadow-color);
     align-items: center;
 }
 
 .stat-icon-wrapper {
-    background-color: #FFF7E1;
+    background-color: var(--icon-background-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
 
 .stat-icon {
     font-size: 1.625rem;
-    color: #F5C452;
+    color: var(--icon-primary);
 }
 
 .stat-content {
@@ -32,12 +32,12 @@
 
 .stat-value {
     font: 800 1.375rem 'Nunito', sans-serif;
-    color: #191919;
+    color: var(--text-primary);
     text-align: left;
 }
 
 .stat-label {
     margin-top: 0.6875rem;
     font: 400 0.875rem 'Nunito', sans-serif;
-    color: #646464;
+    color: var(--text-secondary);
 }

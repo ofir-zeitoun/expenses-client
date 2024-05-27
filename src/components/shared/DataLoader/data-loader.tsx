@@ -2,7 +2,7 @@ import { Children, ReactElement, ReactNode } from "react";
 import { Alert, Spin } from "antd";
 import { UseBaseQueryResult } from "@tanstack/react-query";
 
-interface SuspenseComponentProps {
+interface DataLoaderProps {
   isLoading: UseBaseQueryResult["isLoading"];
   error: UseBaseQueryResult["error"];
   children: ReactNode;
@@ -19,11 +19,7 @@ const ErrorComponent = ({ children }: { children: ReactNode }) => (
   <>{children}</>
 );
 
-export const SuspenseComponent = ({
-  isLoading,
-  error,
-  children,
-}: SuspenseComponentProps) => {
+export const DataLoader = ({ isLoading, error, children }: DataLoaderProps) => {
   if (isLoading) {
     return (
       Children.toArray(children).find((child) => {
@@ -65,5 +61,5 @@ export const SuspenseComponent = ({
   });
 };
 
-SuspenseComponent.Loading = LoadingComponent;
-SuspenseComponent.Error = ErrorComponent;
+DataLoader.Loading = LoadingComponent;
+DataLoader.Error = ErrorComponent;

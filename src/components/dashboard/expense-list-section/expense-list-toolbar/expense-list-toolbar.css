@@ -18,7 +18,7 @@
     outline: none;
     cursor: pointer;
     overflow: hidden;
-    color: #5b93ff;
+    color: var(--button-primary);
 }
 
 .toolbar-sort:focus {
@@ -27,7 +27,7 @@
 
 .tabs {
     border-radius: 0.625rem;
-    background-color: #ebf0f7;
+    background-color: var(--background-muted);
     display: flex;
     font-weight: 700;
     white-space: nowrap;
@@ -41,25 +41,25 @@
     align-items: center;
     text-align: center;
     font-family: Nunito, sans-serif;
-    color: #425b7b;
+    color: var(--text-secondary);
     cursor: pointer;
     min-width: 5rem;
     border-radius: 0.625rem;
 }
 
 .active {
-    background-color: #425b7b;
-    color: #fff;
+    background-color: var(--button-active);
+    color: var(--text-on-primary);
 }
 
 .add-list-button {
     border-radius: 0.625rem;
-    background-color: #425b7b;
+    background-color: var(--button-active);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: #fff;
+    color: var(--text-on-primary);
     font-weight: 600;
     padding: 0.625rem 1.0625rem;
     border: none;

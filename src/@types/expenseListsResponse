@@ -1,0 +1,12 @@
+import { ExpenseLIstType } from "./expense-list-prop";
+import { SortOrder } from "./sortOrderTypes";
+
+export interface ExpenseListsResponse {
+  data: ExpenseLIstType[];
+  isLoading: boolean;
+  error?: Error ;
+  limit: number;
+  offset: number;
+  sortOrder: SortOrder;
+  total: number;
+}

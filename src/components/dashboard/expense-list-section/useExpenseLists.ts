@@ -7,11 +7,6 @@ import { SortOrder } from "../../../@types/sortOrderTypes";
 
 interface ExpenseListsResponse {
   data: ExpenseLIstType[];
-  isLoading: boolean;
-  error: Error | null;
-  limit: number;
-  offset: number;
-  sortOrder: SortOrder;
   total: number;
 }
 
@@ -28,17 +23,17 @@ const fetchExpenseLists = async (
     },
   };
 
-  return apiFetch(
-    `/api/expense-lists?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
+  const response = await apiFetch(
+    `/api/expenses-list?offset=${offset}&limit=${limit}&sortOrder=${sortOrder}`,
     init
-  )
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => data as ExpenseListsResponse);
+  );
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data as ExpenseListsResponse;
 };
 
 export const useExpenseLists = (
@@ -46,7 +41,7 @@ export const useExpenseLists = (
   limit: number,
   sortOrder: SortOrder
 ): UseQueryResult<ExpenseListsResponse, Error> => {
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState<string | null>(null);
   const { getAccessTokenSilently } = useAuth0();
 
   useEffect(() => {
@@ -58,11 +53,11 @@ export const useExpenseLists = (
         console.error("Error fetching the access token", error);
       }
     })();
-  }, [getAccessTokenSilently, setToken]);
+  }, [getAccessTokenSilently]);
 
   return useQuery<ExpenseListsResponse, Error>({
-    enabled: !!token,
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
-    queryFn: () => fetchExpenseLists(token, offset, limit, sortOrder),
+    queryFn: () => fetchExpenseLists(token!, offset, limit, sortOrder),
+    enabled: !!token,
   });
 };

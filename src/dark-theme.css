@@ -1,25 +1,70 @@
 [data-theme="dark"] {
-  --background:#1E2631;
+  /* general  */
+  --primary-color: #0056b3;
+  --secondary-color: none;
+  --accent-color: none;
+  --background-color: #1E2631;
+  --foreground-color: none;
+  --text-color: none;
+  --muted-text-color: #FFFFFFB3;
+  --link-color: none;
+  --border-color: none;
+  --hover-color: none;
+  --active-color: none;
+  --disabled-color: none;
+  --box-shadow-color: #141C27;
 
+  /* texts */
+  --text-primary: #FFFFFF;
+  --text-secondary: #8095B2;
+  --text-muted: #FFFFFFB3;
+  --text-on-primary: #FFFFFF;
+  --text-on-secondary: none;
+  --text-on-background: #FFFFFF;
+  --text-on-disabled: #FFFFFFCC;
 
-  --text-color-on-background:#FFFFFF;
-  --logo-color-on-background:#8095B2;
-  --muted-text-color-on-background:#FFFFFFB3;
+  /* background */
+  --background-primary: #161E29;
+  --background-secondary: none;
+  --background-muted: none;
+  --background-hover: none;
+  --background-active: none;
+  --background-disabled: none;
 
-  --yellow-icon-background:#FFD66B;
-  --yellow-icon-color:#F5C451;
-  --green-icon-background:#68CC58;
-  --green-icon-color:#62B16A;
+  /* button */
+  --button-primary: #5B93FF;
+  --button-secondary: none;
+  --button-hover: none;
+  --button-active: #141A22;
+  --button-disabled: #2D3541;
+  --button-text: #FFFFFF;
+  --button-text-disabled: #FFFFFFCC;
 
-  --cash-green-text-color:#62B16A;
-  --aqua-text-color:#5B93FF;
-  
-  --table-odd-row-background:#2C3343;
+  /* list */
+  --list-header-background: none;
+  --list-row-background: none;
+  --list-row-hover: none;
+  --list-row-active: none;
+  --list-row-odd-background: #2C334380;
+  --list-row-even-background: none;
+  --list-border-color: none;
+  --list-text-primary: #FFFFFF;
+  --list-text-secondary: #8095B2;
 
-  --primary-btn-active:#141A22;
-  --primary-btn-disabled:#2D3541;
+  /* icons */
+  --icon-primary: #F5C451;
+  --icon-secondary: #2B9943;
+  --icon-muted: #E9E9E9;
+  --icon-muted-secondary: #C8CFD9;
+  --icon-hover: none;
+  --icon-active: none;
+  --icon-background-primary: #FFD66B33;
+  --icon-background-secondary: #2B994366;
+  --icon-background-muted: #86868666;
 
-  --text-on-primary-btn-active:#FFFFFF;
-  --text-on-primary-btn-disabled:#FFFFFFCC;
-
+  /* badges */
+  --badge-primary-background: #62B16A1A;
+  --badge-secondary-background: #EDF2FC;
+  --badge-primary-text: #62B16A;
+  --badge-secondary-text: #191919;
 }

@@ -4,9 +4,9 @@
     gap: 1.25rem;
     align-items: center;
     padding: 0.75rem 1.25rem;
-    background-color: #edf2fc;
+    background-color: var(--background-muted);
     border-radius: 0.3125rem;
-    color: #191919;
+    color: var(--text-primary);
     font-size: 0.75rem;
 }
 
@@ -29,19 +29,20 @@
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
-    color: #191919;
+    color: var(--text-primary);
 }
 
 .expense-location {
     font-weight: 300;
     font-size: 0.5rem;
+    color: var(--text-muted);
 }
 
 .expense-price {
     justify-self: center;
     padding: 0.625rem 1.25rem;
-    background-color: rgba(98, 177, 106, 0.1);
-    color: #62b16a;
+    background-color: var(--badge-primary-background);
+    color: var(--badge-primary-text);
     border-radius: 0.5rem;
     font-weight: 700;
     font-size: 0.75rem;
@@ -57,25 +58,26 @@
 }
 
 .edit-icon {
-    justify-self: end;
+    /* justify-self: end; */
 }
 
 .expense-date,
 .expense-time {
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
-    color: #191919;
+    color: var(--text-primary);
 }
 
 .expense-time {
     font-size: 0.625rem;
+    color: var(--text-muted);
 }
 
 .user-icon-wrapper {
     width: 3.125rem;
     height: 3.125rem;
     border-radius: 50%;
-    background-color: #f0f0f0;
+    background-color: var(--icon-background-muted);
     justify-self: start;
     display: flex;
     align-items: center;
@@ -84,5 +86,5 @@
 
 .user-icon {
     font-size: 1.5rem;
-    color: #888;
+    color: var(--icon-muted);
 }

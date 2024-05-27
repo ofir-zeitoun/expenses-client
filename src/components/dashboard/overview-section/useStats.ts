@@ -7,7 +7,7 @@ interface Stats {
   totalUsers: number;
   totalLists: number;
   totalExpenses: number;
-  totalAmount: number;
+  totalPrice: number;
 }
 
 async function fetchStats(token: string): Promise<Stats> {

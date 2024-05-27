@@ -4,15 +4,17 @@
     gap: 1.25rem;
     border-radius: 0.3125rem;
     padding: 0.5rem 1.25rem;
+    background-color: var(--background-secondary);
 }
 
 .notifications-icon {
     height: 1.5rem;
     width: 1.5rem;
+    color: var(--icon-muted);
 }
 
 .notifications-title {
-    color: #191919;
+    color: var(--text-primary);
     font: 700 1.125rem Nunito, sans-serif;
     margin: 0;
 }
@@ -30,7 +32,7 @@
 }
 
 .notification-description {
-    color: #191919;
+    color: var(--text-primary);
     font: 400 0.875rem Nunito, sans-serif;
     margin: 0;
     overflow: hidden;
@@ -38,10 +40,10 @@
     white-space: nowrap;
 }
 
-.notification-amount {
-    background-color: #62b16a;
+.notification-price {
+    background-color: var(--badge-primary-background);
     border-radius: 0.5rem;
-    color: #fff;
+    color: var(--badge-primary-text);
     font: 700 0.75rem Nunito, sans-serif;
     padding: 0.625rem 1.0625rem;
     text-align: center;
