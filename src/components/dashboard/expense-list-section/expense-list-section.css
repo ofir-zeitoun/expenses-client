@@ -5,17 +5,21 @@
     flex-direction: column;
     gap: 1.875rem;
     padding: 0 2.5rem 0.625rem 0.25rem;
+    filter: drop-shadow(1px 4px 40px var(--box-shadow-color));
+
+    color: var(--text-secondary);
+
 }
 
 .load-more-button {
     padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--button-primary);
+    color: var(--button-text);
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .load-more-button:hover {
-    background-color: #0056b3;
+    background-color: var(--button-active);
 }

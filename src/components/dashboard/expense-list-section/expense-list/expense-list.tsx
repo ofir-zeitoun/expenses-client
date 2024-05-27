@@ -3,8 +3,9 @@ import { ExpenseLIstType } from "../../../../@types/expense-list-prop";
 import { ExpenseItem } from "./expense-item";
 import { ExpensesHeader } from "./expenses-header";
 import { ExpenseListHeader } from "./expense-list-header";
-import { PlusOutlined } from "@ant-design/icons";
+
 import "./expense-list.css";
+import AddExpenseItem from "./add-expense-item/add-expense-item";
 
 export const ExpenseList = React.memo(({ list }: { list: ExpenseLIstType }) => {
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
@@ -34,9 +35,9 @@ export const ExpenseList = React.memo(({ list }: { list: ExpenseLIstType }) => {
           <ExpenseItem key={expense._id} expense={expense} />
         ))}
       </div>
-      <button className="add-expense-button">
-        <PlusOutlined /> Add New Expense
-      </button>
+      <AddExpenseItem />
     </div>
   );
 });
+
+export default ExpenseList;

@@ -4,11 +4,12 @@
     display: flex;
     gap: 1.25rem;
     padding: 1.25rem;
+    background-color: var(--background-secondary);
 }
 
 .notification-invitation .accept-icon {
-    color: #2B9943;
-    background-color: #2B994320;
+    color: var(--icon-secondary);
+    background-color: var(--icon-background-secondary);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -18,8 +19,8 @@
 }
 
 .notification-invitation .cancel-icon {
-    color: #868686;
-    background-color: #86868610;
+    color: var(--icon-muted);
+    background-color: var(--icon-background-muted);
     width: 2rem;
     height: 2rem;
     border-radius: 50%;

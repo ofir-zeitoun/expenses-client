@@ -1,13 +1,14 @@
 .expenses-header {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1.875rem;
+    grid-template-columns: 1.5625rem 3fr 1fr 2fr 1.25rem;
     padding: 0.75rem 1.25rem;
-    max-width: 40.75rem;
+    /* max-width: 40.75rem; */
     border-radius: 0.3125rem;
     margin-bottom: 0.625rem;
     font-size: 0.75rem;
-    color: #191919;
+    color: var(--text-primary);
     align-items: center;
+    background-color: var(--background-secondary);
 }
 
 .expenses-header-participant,
@@ -15,9 +16,15 @@
 .expenses-header-price,
 .expenses-header-date-time {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     text-align: center;
+
 }
+
+.expenses-header-date-time {
+    margin-left: 4rem;
+}
+
 
 .expenses-header>div:not(:first-child) {
     padding-right: 1rem;

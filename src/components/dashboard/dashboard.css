@@ -3,16 +3,21 @@
     justify-content: space-between;
     padding: 1.25rem 0;
     height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-primary);
 }
 
 .overview-section {
     width: 48%;
     height: 100%;
     max-height: calc(100vh - 7.5rem);
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
 }
 
 .expense-list-section {
     width: 48%;
     height: 100%;
-
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
 }

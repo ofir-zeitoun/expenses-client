@@ -1,4 +1,77 @@
 [data-theme="dark"] {
+  /* general  */
+  --primary-color: #0056b3;
+  --secondary-color: none;
+  --accent-color: none;
+  --background-color: #1E2631;
+  --foreground-color: none;
+  --text-color: none;
+  --muted-text-color: #FFFFFFB3;
+  --link-color: none;
+  --border-color: none;
+  --hover-color: none;
+  --active-color: none;
+  --disabled-color: none;
+  --box-shadow-color: #141C27;
+
+  /* texts */
+  --text-primary: #FFFFFF;
+  --text-secondary: #8095B2;
+  --text-muted: #FFFFFFB3;
+  --text-on-primary: #FFFFFF;
+  --text-on-secondary: none;
+  --text-on-background: #FFFFFF;
+  --text-on-disabled: #FFFFFFCC;
+
+  /* background */
+  --background-primary: #161E29;
+  --background-secondary: none;
+  --background-muted: none;
+  --background-hover: none;
+  --background-active: none;
+  --background-disabled: none;
+
+  /* button */
+  --button-primary: #5B93FF;
+  --button-secondary: none;
+  --button-hover: none;
+  --button-active: #141A22;
+  --button-disabled: #2D3541;
+  --button-text: #FFFFFF;
+  --button-text-disabled: #FFFFFFCC;
+
+  /* list */
+  --list-header-background: none;
+  --list-row-background: none;
+  --list-row-hover: none;
+  --list-row-active: none;
+  --list-row-odd-background: #2C334380;
+  --list-row-even-background: none;
+  --list-border-color: none;
+  --list-text-primary: #FFFFFF;
+  --list-text-secondary: #8095B2;
+
+  /* icons */
+  --icon-primary: #F5C451;
+  --icon-secondary: #2B9943;
+  --icon-muted: #E9E9E9;
+  --icon-muted-secondary: #C8CFD9;
+  --icon-hover: none;
+  --icon-active: none;
+  --icon-background-primary: #FFD66B33;
+  --icon-background-secondary: #2B994366;
+  --icon-background-muted: #86868666;
+
+  /* badges */
+  --badge-primary-background: #62B16A1A;
+  --badge-secondary-background: #EDF2FC;
+  --badge-primary-text: #62B16A;
+  --badge-secondary-text: #191919;
+}
+
+
+
+/* 
   --background: #1E2631;
 
   --primary-color: #0056b3;
@@ -23,4 +96,4 @@
   --text-on-primary-btn-active: #FFFFFF;
   --text-on-primary-btn-disabled: #FFFFFFCC;
 
-}
+} */

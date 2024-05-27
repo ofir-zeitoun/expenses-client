@@ -7,7 +7,7 @@
 }
 
 .list-name {
-    color: #191919;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .total-price {
-    color: #2b9943;
+    color: var(--icon-secondary);
     font-family: Nunito, sans-serif;
     font-weight: 700;
     margin-right: 1.75rem;
@@ -34,7 +34,7 @@
 
 .filter-button,
 .sort-button {
-    color: #191919;
+    color: var(--text-primary);
     font-family: Nunito, sans-serif;
     background: none;
     border: none;
@@ -51,7 +51,7 @@
 }
 
 .sort-button {
-    color: #5b93ff;
+    color: var(--button-primary);
 }
 
 .list-options-icon {
@@ -67,5 +67,5 @@
 }
 
 .menu-Remove {
-    color: "red";
+    color: red;
 }

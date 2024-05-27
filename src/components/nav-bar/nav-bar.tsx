@@ -39,8 +39,8 @@ export const NavBar = () => {
       <div className="left-nav">
         <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
         <span className="app-name">Expenses Dashboard</span>
-        <ThemeSwitcher/>
       </div>
+      <ThemeSwitcher />
       <div className="right-nav">
         <div className="ConnectionHealth">
           <ConnectionHealth />
