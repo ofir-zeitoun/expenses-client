@@ -19,11 +19,9 @@ export const ExpenseListSection = () => {
 
   const updateLists = useCallback(() => {
     if (section?.data) {
-      setLists((prevLists) =>
-        offset === 0 ? section.data : [...prevLists, ...section.data]
-      );
+      setLists((prevLists) => [...prevLists, ...section.data]);
     }
-  }, [section, offset]);
+  }, [section?.data]);
 
   useEffect(() => {
     updateLists();
