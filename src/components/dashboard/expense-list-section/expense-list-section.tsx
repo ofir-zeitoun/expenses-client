@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { SortOrder } from "../../../@types/sortOrderTypes";
 import ExpenseListToolbar from "./expense-list-toolbar/expense-list-toolbar";
-import { ExpenseList } from "./expense-list/expense-list";
-import "./expense-list-section.css";
 import { ExpenseLIstType } from "../../../@types/expense-list-prop";
-import { useExpenseLists } from "./useExpenseLists";
 import { DataLoader } from "../../shared/DataLoader";
+import { ExpenseList } from "./expense-list/expense-list";
+import { useExpenseLists } from "./useExpenseLists";
+import "./expense-list-section.css";
 
 export const ExpenseListSection = () => {
   const [sortOrder, setSortOrder] = useState<SortOrder>("asc");
