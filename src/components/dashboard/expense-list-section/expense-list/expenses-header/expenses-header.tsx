@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-
 import "./expenses-header.css";
 import { SortOrder } from "../../../../../@types/sortOrderTypes";
 import { SortField } from "../../../../../@types/sortField";

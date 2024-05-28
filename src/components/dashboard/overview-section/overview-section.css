@@ -1,26 +1,26 @@
 .overview-section {
     display: flex;
     flex-direction: column;
-    align-items: end;
     gap: 1.25rem;
     margin-bottom: -2rem;
     background-color: var(--background-secondary);
     color: var(--text-secondary);
+    padding: 0px 2rem;
+
 }
 
 .stats-cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(18.75rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
-    justify-content: center;
+    width: 100%;
     box-sizing: border-box;
-    width: 90%;
     color: var(--text-primary);
 }
 
 .notification-card {
     box-shadow: 0.0625rem 0.25rem 2.5rem var(--box-shadow-color);
-    width: 90%;
+    width: 100%;
     border-radius: 0.625rem;
     margin-top: -0.25rem;
     margin-bottom: 2rem;
@@ -29,4 +29,24 @@
     flex-direction: column;
     background-color: var(--background-muted);
     color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .stats-cards {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        gap: 1.0rem;
+    }
+
+    .overview-section {
+        align-items: center;
+        width: 100%;
+        padding: 0rem 1.5rem 0 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .notification-card {
+
+        display: none;
+    }
 }

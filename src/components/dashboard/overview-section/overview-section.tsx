@@ -24,22 +24,29 @@ export const OverviewSection = () => {
             icon={<CreditCardOutlined />}
             value={`${stats?.totalExpenses ?? "N/A"}`}
             label="Total Expenses"
+            iconBackgroundColor="var(--icon-background-primary)"
+            iconColor="var(--icon-primary)"
           />
-
           <StatCard
             icon={<UnorderedListOutlined />}
             value={`${stats?.totalLists ?? "N/A"}`}
             label="Lists"
+            iconBackgroundColor="var(--icon-background-primary)"
+            iconColor="var(--icon-primary)"
           />
           <StatCard
             icon={<UserOutlined />}
             value={`${stats?.totalUsers ?? "N/A"}`}
             label="Users"
+            iconBackgroundColor="var(--icon-background-primary)"
+            iconColor="var(--icon-primary)"
           />
           <StatCard
             icon={<DollarCircleOutlined />}
             value={`$${stats?.totalPrice?.toFixed(2) ?? "N/A"}`}
             label="Total Price"
+            iconBackgroundColor="var(--icon-background-primary)"
+            iconColor="var(--icon-primary)"
           />
         </div>
         <div className="notification-card">

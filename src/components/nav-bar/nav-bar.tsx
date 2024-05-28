@@ -42,7 +42,7 @@ export const NavBar = () => {
       </div>
       <ThemeSwitcher />
       <div className="right-nav">
-        <div className="ConnectionHealth">
+        <div className="connection-wrapper">
           <ConnectionHealth />
         </div>
         <div className="auth-container">

@@ -5,6 +5,7 @@
     height: 100%;
     background-color: var(--background-color);
     color: var(--text-primary);
+    overflow-y: auto;
 }
 
 .overview-section {
@@ -20,4 +21,19 @@
     height: 100%;
     background-color: var(--background-secondary);
     color: var(--text-secondary);
+}
+
+@media (max-width: 960px) {
+    .dashboard {
+        flex-direction: column;
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .overview-section,
+    .expense-list-section {
+        width: 100%;
+        max-height: none;
+        margin-bottom: 1rem;
+    }
 }

@@ -29,6 +29,11 @@
 	height: 4rem;
 }
 
+.logo img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
 .user-photo span {
 	width: 2.875rem;
 	height: 2.875rem;
@@ -58,6 +63,7 @@
 	line-height: 1.5rem;
 	text-transform: uppercase;
 	color: #456085;
+	margin-left: 0.5rem;
 }
 
 .auth-action {
@@ -76,11 +82,81 @@
 
 .auth-container {
 	display: flex;
+	align-items: center;
 	gap: 2rem;
 }
 
-
-
 .menu-logout {
-	color: "red";
+	color: red;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: row;
+		height: auto;
+		padding: 0.5rem 1rem;
+		justify-content: space-between;
+	}
+
+	.left-nav,
+	.right-nav {
+		flex-direction: row;
+		align-items: center;
+		width: auto;
+		justify-content: flex-start;
+	}
+
+	.logo {
+		line-height: 1.25rem;
+		font-size: 0.875rem;
+		margin-bottom: 0;
+	}
+
+	.logo img {
+		max-height: 40px;
+		max-width: 80px;
+		height: auto;
+		width: auto;
+	}
+
+	.user-login {
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+
+	.auth-container {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: auto;
+	}
+
+	.user-name {
+		font-size: 0.875rem;
+		margin-left: 0.5rem;
+	}
+
+	.right-nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: auto;
+		gap: 0.5rem;
+	}
+
+	/* Hide user name and connection health on mobile */
+	.user-name,
+	.connection-wrapper {
+		display: none;
+	}
+
+	.btn-container {
+		margin-right: 0.5rem;
+	}
+
+	.app-name {
+		margin-left: 2.5rem;
+	}
 }

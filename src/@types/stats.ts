@@ -5,4 +5,6 @@ export interface StatCardProps {
   imageSrc?: string;
   value: string;
   label: string;
+  iconBackgroundColor?: string;
+  iconColor: string;
 }

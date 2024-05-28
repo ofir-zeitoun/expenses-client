@@ -6,9 +6,7 @@
     gap: 1.875rem;
     padding: 0 2.5rem 0.625rem 0.25rem;
     filter: drop-shadow(1px 4px 40px var(--box-shadow-color));
-
     color: var(--text-secondary);
-
 }
 
 .load-more-button {
@@ -22,4 +20,11 @@
 
 .load-more-button:hover {
     background-color: var(--button-active);
+}
+
+@media (max-width: 768px) {
+    .expense-list-container {
+        max-height: none;
+        padding: 0 1rem 1rem;
+    }
 }
