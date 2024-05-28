@@ -61,3 +61,26 @@
     width: 100%;
     margin-left: 2px;
 }
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .add-expense-item {
+        text-align: center;
+    }
+
+    .expense-icon-placeholder {
+        margin: 0 auto;
+    }
+
+    .expense-details-placeholder {
+        margin: 0 auto;
+    }
+
+    .empty-placeholder {
+        margin: 0 auto;
+    }
+
+    .add-expense-button-container {
+        justify-content: center;
+    }
+}

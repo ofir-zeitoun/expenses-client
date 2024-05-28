@@ -1,14 +1,14 @@
 .expenses-header {
     display: grid;
-    grid-template-columns: 1.5625rem 3fr 1fr 2fr 1.25rem;
-    padding: 0.75rem 1.25rem;
-    /* max-width: 40.75rem; */
+    grid-template-columns: 2.5625rem 2.75fr 1fr 2fr 1.25rem 0fr;
+    padding: 0.25rem 1.25rem;
     border-radius: 0.3125rem;
     margin-bottom: 0.625rem;
     font-size: 0.75rem;
     color: var(--text-primary);
     align-items: center;
     background-color: var(--background-secondary);
+    font-weight: bold;
 }
 
 .expenses-header-participant,
@@ -18,13 +18,11 @@
     display: flex;
     justify-content: center;
     text-align: center;
-
 }
 
 .expenses-header-date-time {
     margin-left: 4rem;
 }
-
 
 .expenses-header>div:not(:first-child) {
     padding-right: 1rem;
@@ -43,4 +41,46 @@
     font-family: Nunito, sans-serif;
     font-size: 0.75rem;
     font-weight: bold;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .expenses-header {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .expenses-header-participant,
+    .expenses-header-expense,
+    .expenses-header-price,
+    .expenses-header-date-time {
+        justify-content: flex-start;
+        text-align: left;
+        font-size: 0.75rem;
+    }
+
+    .expenses-header-date-time {
+        margin-left: 0;
+    }
+
+    .expenses-header>div {
+        padding-right: 0.5rem;
+    }
+
+    /* Adjusting list-header-actions for responsive view */
+    .list-header-actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+
+    .expenses-header {
+        grid-template-columns: 6.25rem 3fr 2fr 3fr 1.25rem;
+    }
+
 }

@@ -2,11 +2,6 @@
     border-radius: 0.625rem;
     padding: 1.25rem 1.25rem;
     background: var(--background-primary);
-
-    /* box-shadow: 0.125rem 0.125rem 0.125rem 0.25rem rgba(201, 203, 205, 0.1); */
-    /* box-shadow: 0.125rem 0.125rem 0.125rem 0.25rem var(--box-shadow-color);
-    box-shadow: 0.0625rem 0.25rem 2.5rem var(--box-shadow-color); */
-    /* box-shadow: 0.0625rem 0.25rem 2.5rem var(--box-shadow-color); */
 }
 
 .expenses-list .expense-item:nth-child(odd) {
@@ -39,4 +34,13 @@
 
 .add-expense-button svg {
     margin-right: 0.5rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .expenses-list {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
