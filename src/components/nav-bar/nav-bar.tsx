@@ -30,12 +30,11 @@ export const NavBar = ({ setIsUserAuthenticated }: NavBarProps) => {
         const token = await getAccessTokenSilently();
         try {
           const response = await apiFetch("/api/users/check", {
-            method: "POST",
+            method: "GET",
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify({ auth0Id: user.sub }),
           });
 
           if (!response.ok) {
