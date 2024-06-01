@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { UseQueryResult, useQuery } from "@tanstack/react-query";
+import {
+  UseQueryResult,
+  useQuery,
+  useMutation,
+  UseMutationResult,
+  useQueryClient,
+} from "@tanstack/react-query";
 import { apiFetch } from "../../../api";
-import { ExpenseLIstType } from "../../../@types/expense-list-prop";
-import { SortOrder } from "../../../@types/sortOrderTypes";
 
-interface ExpenseListsResponse {
-  data: ExpenseLIstType[];
-  total: number;
-}
+import { SortOrder } from "../../../@types/sortOrderTypes";
+import {
+  ExpenseListsResponse,
+  AddExpenseListVariables,
+  ExpenseListType,
+} from "../../../@types/expense-list-prop";
 
 const fetchExpenseLists = async (
   token: string,
@@ -36,6 +42,29 @@ const fetchExpenseLists = async (
   return data as ExpenseListsResponse;
 };
 
+const addExpenseList = async (
+  token: string,
+  name: string
+): Promise<ExpenseListType> => {
+  const init = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ name }),
+  };
+
+  const response = await apiFetch("/api/expenses-list", init);
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data as ExpenseListType;
+};
+
 export const useExpenseLists = (
   offset: number,
   limit: number,
@@ -59,5 +88,55 @@ export const useExpenseLists = (
     queryKey: ["expenseLists", token, offset, limit, sortOrder],
     queryFn: () => fetchExpenseLists(token!, offset, limit, sortOrder),
     enabled: !!token,
+  });
+};
+
+export const useAddExpenseList = (): UseMutationResult<
+  ExpenseListType,
+  Error,
+  AddExpenseListVariables
+> => {
+  const queryClient = useQueryClient();
+  const { getAccessTokenSilently } = useAuth0();
+
+  return useMutation<ExpenseListType, Error, AddExpenseListVariables>({
+    mutationFn: async ({ name }: AddExpenseListVariables) => {
+      const token = await getAccessTokenSilently();
+      return addExpenseList(token, name);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["expenseLists"] });
+    },
+  });
+};
+
+export const useDeleteExpenseList = (): UseMutationResult<
+  void,
+  Error,
+  string
+> => {
+  const queryClient = useQueryClient();
+  const { getAccessTokenSilently } = useAuth0();
+
+  return useMutation<void, Error, string>({
+    mutationFn: async (listId: string) => {
+      const token = await getAccessTokenSilently();
+      const init = {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      };
+
+      const response = await apiFetch(`/api/expenses-list/${listId}`, init);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["expenseLists"] });
+    },
   });
 };

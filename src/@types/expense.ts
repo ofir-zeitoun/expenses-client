@@ -1,4 +1,5 @@
 export type Expense = {
+  creator: { name: string; photo: string };
   createdAt: Date;
   _id: string;
   creatorImageUrl: string;

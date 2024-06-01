@@ -1,10 +1,9 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { UseQueryResult, useQuery } from "@tanstack/react-query";
-
 import { useEffect, useState } from "react";
+import { apiFetch } from "../../../../api";
 import { SortOrder } from "../../../../@types/sortOrderTypes";
 import { Expense } from "../../../../@types/expense";
-import { apiFetch } from "../../../../api";
 
 async function fetchExpense(
   token: string,

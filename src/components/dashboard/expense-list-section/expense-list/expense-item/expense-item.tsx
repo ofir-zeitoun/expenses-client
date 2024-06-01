@@ -7,7 +7,10 @@ import "./expense-item.css";
 export const ExpenseItem = ({ expense }: { expense: Expense }) => {
   return (
     <div className={`expense-item`}>
-      <UserPicture creatorImageUrl={expense.creatorImageUrl} />
+      <UserPicture
+        creatorImageUrl={expense.creator.photo}
+        creatorName={expense.creator.name}
+      />
       <div className="expense-details">
         <div className="expense-title">{expense.name}</div>
       </div>
