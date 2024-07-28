@@ -1,4 +1,4 @@
-import { Dropdown } from "antd";
+import { Dropdown, message } from "antd";
 import {
   UserOutlined,
   SettingOutlined,
@@ -8,11 +8,15 @@ import {
 import "./expense-list-header.css";
 
 export const ExpenseListHeader = ({
+  listId,
   listName,
   expenseTotal,
+  onDelete,
 }: {
+  listId: string;
   listName: string;
   expenseTotal: string;
+  onDelete: (id: string) => void;
 }) => {
   const items = [
     {
@@ -21,16 +25,22 @@ export const ExpenseListHeader = ({
       label: "Invite",
     },
     {
-      key: "Permissions",
+      key: "permissions",
       icon: <SettingOutlined />,
-      label: "Permissions ",
+      label: "Permissions",
     },
     {
       key: "delete",
       icon: <DeleteFilled />,
       label: "Remove List",
-      className: "menu-Remove",
-      onClick: () => console.log("test logout"),
+      className: "menu-remove",
+      onClick: () => {
+        if (!listId) {
+          message.error("Invalid list ID");
+          return;
+        }
+        onDelete(listId);
+      },
     },
   ];
 

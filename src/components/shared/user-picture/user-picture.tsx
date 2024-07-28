@@ -1,16 +1,22 @@
+import { Tooltip } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import "./user-picture.css";
 
 type Props = {
   creatorImageUrl?: string;
+  creatorName?: string;
 };
 
-export const UserPicture = ({ creatorImageUrl }: Props) => {
+export const UserPicture = ({ creatorImageUrl, creatorName }: Props) => {
   return creatorImageUrl ? (
-    <img className="expense-icon" src={creatorImageUrl} alt="Creator" />
+    <Tooltip title={creatorName}>
+      <img className="user-icon" src={creatorImageUrl} alt={creatorName} />
+    </Tooltip>
   ) : (
-    <div className="user-icon-wrapper">
-      <UserOutlined className="user-icon" />
-    </div>
+    <Tooltip title={creatorName}>
+      <div className="user-icon-wrapper">
+        <UserOutlined className="user-icon" />
+      </div>
+    </Tooltip>
   );
 };

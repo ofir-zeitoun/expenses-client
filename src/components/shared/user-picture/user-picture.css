@@ -1,0 +1,23 @@
+.user-icon-wrapper {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    background-color: var(--icon-background-muted);
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-icon {
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 1.5rem;
+    color: var(--icon-muted);
+    border-radius: 50%;
+    background-color: var(--icon-background-muted);
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
