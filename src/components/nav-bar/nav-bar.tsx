@@ -9,6 +9,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
 import { ThemeSwitcher } from "../theme-switcher";
 import "./nav-bar.css";
+import { TranslationSwitcher } from "../translation";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
@@ -41,6 +42,7 @@ export const NavBar = () => {
         <span className="app-name">Expenses Dashboard</span>
       </div>
       <ThemeSwitcher />
+      <TranslationSwitcher/>
       <div className="right-nav">
         <div className="connection-wrapper">
           <ConnectionHealth />
