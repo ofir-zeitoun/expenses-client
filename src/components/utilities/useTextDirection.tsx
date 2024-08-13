@@ -1,12 +1,14 @@
+import i18next from 'i18next';
 import { useEffect, useState } from 'react';
 
 type TextDirection = "rtl" | "ltr";
 
-export const useTextDirection = (): [TextDirection, (newDir: TextDirection) => void] => {
+export const useTextDirection = (): [TextDirection, (newDir: TextDirection) => void , (language: string) => void] => {
     //get default dir from system browser
     // how to handle css 
     const savedDir = localStorage.getItem("currentDir") as TextDirection || 'ltr';
     const [currentDir, setCurrentDir] = useState<TextDirection>(savedDir);
+
 
     useEffect(() => {
         document.documentElement.setAttribute("data-text-dir", currentDir);
@@ -17,5 +19,11 @@ export const useTextDirection = (): [TextDirection, (newDir: TextDirection) => v
         localStorage.setItem("currentDir", newDir);
     };
 
-    return [currentDir, handleSetDir];
+    const changeDirWithLanguage = (language: string) => {
+        const newDir : TextDirection = i18next.dir(language);
+        setCurrentDir(newDir);
+        localStorage.setItem("currentDir", newDir);
+    };
+
+    return [currentDir, handleSetDir,changeDirWithLanguage];
 };

@@ -7,27 +7,25 @@ import { useTextDirection } from '../utilities/useTextDirection';
 
 export const TranslationSwitcher = () => {
     const { t } = useTranslation();
-    const [,handleSetDir ] = useTextDirection();
+    const [, ,changeDirWithLanguage] = useTextDirection();
     const items = [
         {
             key: "en",
-            textDirection: 'ltr',
             icon: <GlobalOutlined />,
             label: "English",
             onClick: () => {
                 changeLanguage('en');
-                handleSetDir('ltr');
+                changeDirWithLanguage('en');
             },
 
         },
         {
             key: "he",
-            textDirection: 'rtl',
             icon: <GlobalOutlined />,
             label: "Hebrew",
             onClick: () => {
                 changeLanguage('he');
-                handleSetDir('rtl');
+                changeDirWithLanguage('he');
             },
         },
     ];
