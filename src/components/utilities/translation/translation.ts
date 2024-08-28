@@ -1,17 +1,17 @@
-import { en,he } from "./lang";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import Backend from 'i18next-http-backend';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
-//language codes information see table at - https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes
-// use set 1 
-i18n.use(initReactI18next).init({
-        // debug: true,
+i18n.use(LanguageDetector)
+    .use(initReactI18next)
+    .use(Backend).init({
+        debug: true,
         fallbackLng: "en",
-        resources: {
-            ...en,
-            ...he,
+        backend: {
+            loadPath: '/locales/{{lng}}/{{ns}}.json'
         }
     }
-);
+    );
 
 export default i18n;

@@ -1,13 +1,11 @@
-import './translation.css';
-import { useTranslation } from "react-i18next";
 import { GlobalOutlined } from "@ant-design/icons";
 import { Dropdown } from "antd";
 import { changeLanguage } from 'i18next';
+import './translation.css';
 import { useTextDirection } from '../utilities/useTextDirection';
 
 export const TranslationSwitcher = () => {
-    const { t } = useTranslation();
-    const [, ,changeDirWithLanguage] = useTextDirection();
+    const [changeDirWithLanguage] = useTextDirection();
     const items = [
         {
             key: "en",

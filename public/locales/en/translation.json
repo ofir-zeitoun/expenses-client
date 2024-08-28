@@ -1,0 +1,10 @@
+{
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Log Out",
+    "app-name": "Expenses Dashboard",
+    "login": "Log In",
+    
+    "server-connected": "Server Connected!",
+    "server-disconnected": "Server Disconnected!"
+}
