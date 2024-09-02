@@ -1,25 +1,19 @@
-import i18next from 'i18next';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect} from 'react';
 import { useTranslation } from 'react-i18next';
 
-type TextDirection = "rtl" | "ltr";
 
-export const useTextDirection = (): [(language: string) => void] => {
+export const useTextDirection = (): (language: string) => void => {
     
     const { i18n} = useTranslation();
-    const savedDir = localStorage.getItem("currentDir") as TextDirection || 'ltr';
-    const [currentDir, setCurrentDir] = useState<TextDirection>(savedDir);
 
     useEffect(() => {
-        document.documentElement.setAttribute("data-text-dir", currentDir);
-    }, [currentDir]);
+        document.dir = i18n.dir()
+    }, [i18n.language]);
 
-    const changeDirWithLanguage = (language: string) => {
-        const newDir : TextDirection = i18next.dir(language);
-        i18n.changeLanguage(language)
-        setCurrentDir(newDir);
-        localStorage.setItem("currentDir", newDir);
-    };
+    const changeDirWithLanguage = useCallback((language: string) => {
+        i18n.changeLanguage(language);
+        document.dir = i18n.dir()
+    }, [i18n]);
 
-    return [changeDirWithLanguage];
+    return changeDirWithLanguage;
 };

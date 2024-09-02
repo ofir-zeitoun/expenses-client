@@ -5,6 +5,6 @@
     "app-name": "Expenses Dashboard",
     "login": "התחברות",
     
-    "server-connected": "השרת מחובר !",
-    "server-disconnected": "השרת לא מחובר !"
+    "server-connected": "השרת מחובר",
+    "server-disconnected": "השרת לא מחובר"
 }

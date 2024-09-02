@@ -5,7 +5,7 @@ import { I18nextProvider } from "react-i18next";
 import { Auth0ProviderWithNavigate } from "./components/utilities";
 import App from "./App";
 import "./index.css";
-import i18n from "./components/utilities/translation/translation";
+import i18n from "./services/translation/translation";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

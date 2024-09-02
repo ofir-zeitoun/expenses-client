@@ -93,7 +93,7 @@
 }
 
 
-[data-text-dir="rtl"] {
+[dir="rtl"] {
 	.navbar{
 		direction: rtl;
 	}

@@ -5,7 +5,7 @@ import './translation.css';
 import { useTextDirection } from '../utilities/useTextDirection';
 
 export const TranslationSwitcher = () => {
-    const [changeDirWithLanguage] = useTextDirection();
+    const changeDirWithLanguage = useTextDirection();
     const items = [
         {
             key: "en",

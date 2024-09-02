@@ -5,6 +5,6 @@
     "app-name": "Expenses Dashboard",
     "login": "Log In",
     
-    "server-connected": "Server Connected!",
-    "server-disconnected": "Server Disconnected!"
+    "server-connected": "Server Connected",
+    "server-disconnected": "Server Disconnected"
 }
