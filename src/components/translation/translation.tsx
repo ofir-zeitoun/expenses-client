@@ -1,32 +1,30 @@
 import { GlobalOutlined } from "@ant-design/icons";
 import { Dropdown } from "antd";
 import { changeLanguage } from 'i18next';
+import { LanguageOption } from "./language-option";
 import './translation.css';
 import { useTextDirection } from '../utilities/useTextDirection';
+import { useMemo } from "react";
+
 
 export const TranslationSwitcher = () => {
     const changeDirWithLanguage = useTextDirection();
-    const items = [
-        {
-            key: "en",
-            icon: <GlobalOutlined />,
-            label: "English",
-            onClick: () => {
-                changeLanguage('en');
-                changeDirWithLanguage('en');
-            },
+    const items = useMemo(() => {
 
-        },
-        {
-            key: "he",
-            icon: <GlobalOutlined />,
-            label: "Hebrew",
-            onClick: () => {
-                changeLanguage('he');
-                changeDirWithLanguage('he');
-            },
-        },
-    ];
+        return LanguageOption.map(lang => {
+            return ({
+                key: lang.key,
+                icon: lang.key,
+                label: lang.label,
+                onClick: () => {
+                    changeLanguage(lang.key);
+                    changeDirWithLanguage(lang.key);
+                },
+
+            })
+        })
+    }
+        , []);
 
     return (
         <div className="translation">

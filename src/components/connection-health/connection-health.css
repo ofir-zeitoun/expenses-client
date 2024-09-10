@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-[data-text-dir="rtl"] {
+[dir="rtl"] {
     .connection-wrapper {
         padding-right: 0rem;
         padding-left: 5rem;
