@@ -5,6 +5,7 @@ import { LanguageOption } from "./language-option";
 import './translation.css';
 import { useTextDirection } from '../utilities/useTextDirection';
 import { useMemo } from "react";
+import { FlagIcon } from "../flag-icon";
 
 
 export const TranslationSwitcher = () => {
@@ -14,7 +15,7 @@ export const TranslationSwitcher = () => {
         return LanguageOption.map(lang => {
             return ({
                 key: lang.key,
-                icon: lang.key,
+                icon: <FlagIcon countryCode={lang.countryCode}/>,
                 label: lang.label,
                 onClick: () => {
                     changeLanguage(lang.key);
