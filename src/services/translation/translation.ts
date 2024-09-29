@@ -6,7 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 i18n.use(LanguageDetector)
     .use(initReactI18next)
     .use(Backend).init({
-        debug: true,
+        debug: !(import.meta.env.VITE_PRODUCTION_BUILD == 'true'),
         fallbackLng: "en",
         backend: {
             loadPath: '/locales/{{lng}}/{{ns}}.json'

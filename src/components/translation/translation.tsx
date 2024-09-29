@@ -1,16 +1,16 @@
-import { GlobalOutlined } from "@ant-design/icons";
+import { useMemo } from "react";
 import { Dropdown } from "antd";
 import { changeLanguage } from 'i18next';
+import { GlobalOutlined } from "@ant-design/icons";
 import { LanguageOption } from "./language-option";
 import './translation.css';
 import { useTextDirection } from '../utilities/useTextDirection';
-import { useMemo } from "react";
 import { FlagIcon } from "../flag-icon";
 
 
 export const TranslationSwitcher = () => {
     const changeDirWithLanguage = useTextDirection();
-    const items = useMemo(() => {
+    const languages = useMemo(() => {
 
         return LanguageOption.map(lang => {
             return ({
@@ -30,7 +30,7 @@ export const TranslationSwitcher = () => {
     return (
         <div className="translation">
             <Dropdown
-                menu={{ items }}
+                menu={{ items: languages }}
                 placement="bottomRight"
                 trigger={["click"]}
             >
