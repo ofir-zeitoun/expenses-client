@@ -52,6 +52,7 @@
 
 .user-login {
 	margin-right: 2.875rem;
+	margin-left: 2.875rem;
 	cursor: pointer;
 }
 
@@ -64,6 +65,7 @@
 	text-transform: uppercase;
 	color: #456085;
 	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 .auth-action {
@@ -88,6 +90,14 @@
 
 .menu-logout {
 	color: red;
+}
+
+
+[dir="rtl"] {
+	.navbar{
+		direction: rtl;
+	}
+
 }
 
 /* Media query for mobile devices */
@@ -121,8 +131,7 @@
 	}
 
 	.user-login {
-		margin-right: 0;
-		margin-bottom: 0;
+		margin:0;
 	}
 
 	.auth-container {
@@ -135,6 +144,8 @@
 	.user-name {
 		font-size: 0.875rem;
 		margin-left: 0.5rem;
+		margin-right: 0.5rem;
+
 	}
 
 	.right-nav {
@@ -154,9 +165,14 @@
 
 	.btn-container {
 		margin-right: 0.5rem;
+		margin-left: 0.5rem;
 	}
 
 	.app-name {
+		margin-right: 2.5rem;
 		margin-left: 2.5rem;
+
 	}
 }
+
+

@@ -28,7 +28,8 @@ export default function (plop) {
       {
         type: "add",
         path: "src/components/{{kebab-case name}}/index.ts",
-        template: `export * from './{{kebab-case name}}';`,
+        templateFile: "plop-templates/index.ts.hbs",
+
       },
     ],
   });

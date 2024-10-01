@@ -1,12 +1,11 @@
 import './{{kebab-case name}}.css';
+import { useTranslation} from "react-i18next";
 
+export const {{pascalCase name}} = () => {
 
-
-export const {{pascalCase name}} =  () => {
-    return (
-        <div className="{{kebab-case name}}">
-            {{pascalCase name}} Component
-        </div>
-    );
+return (
+<div className="{{kebab-case name}}">
+    {{kebab-case name}}
+</div>
+);
 };
-

@@ -1,4 +1,3 @@
-import React from "react";
 import { Switch } from "antd";
 import { SunOutlined, MoonOutlined } from "@ant-design/icons";
 import "./theme-switcher.css";

@@ -1,0 +1,27 @@
+.flag-icon {
+    width: 52px;/*width of the flag in the image */
+    height: 42px;/*height of the flag in the image */
+    --row-height: 74.5px;/*width of the row in the image */
+    --col-width: 86.2px;/*height of the column in the image */
+    background-image: url(/flags.jpg);
+    transform: scale(0.5); /*I dont like this solution but i cant figure out how to change its size */
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    content: "";
+    
+    background-position-x: calc( 0px - (var(--col-width) * var(--flag-col)));
+    background-position-y: calc( -10px - (var(--row-height) * var(--flag-row))); 
+
+    &.IL {
+        --flag-col:8;
+        --flag-row:4;
+    }
+
+    &.US {
+        --flag-col:6;
+        --flag-row:10;
+    }
+
+
+}
