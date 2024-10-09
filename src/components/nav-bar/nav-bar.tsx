@@ -43,7 +43,7 @@ export const NavBar = () => {
         <span className="app-name">{t("app-name")}</span>
       </div>
       <ThemeSwitcher />
-      <TranslationSwitcher/>
+      <TranslationSwitcher />
       <div className="right-nav">
         <div className="connection-wrapper">
           <ConnectionHealth />
@@ -72,8 +72,17 @@ export const NavBar = () => {
           ) : (
             <>
               <span className="user-login" onClick={() => loginWithRedirect()}>
-              {t("login")}
+                {t("login")}
               </span>
+              <Dropdown
+                menu={{
+                  items: items.filter((item) => item.key === "settings"),
+                }}
+                placement="bottomRight"
+                trigger={["click"]}
+              >
+                <MoreOutlined />
+              </Dropdown>
             </>
           )}
         </div>
