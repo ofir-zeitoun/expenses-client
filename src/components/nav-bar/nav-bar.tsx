@@ -13,7 +13,6 @@ import { TranslationSwitcher } from "../translation";
 import { useTranslation } from "react-i18next";
 import { SettingsModal } from "../modals/settings-modal";
 import { useState } from "react";
-import { is } from "date-fns/locale";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
