@@ -1,6 +1,9 @@
 import { Modal, Select } from "antd";
 import { useState } from "react";
 import "./settings-modal.css";
+import { useTheme } from "../../utilities/useTheme";
+import { useTextDirection } from "../../utilities/useTextDirection";
+import { changeLanguage } from "i18next";
 
 type SettingsModalProps = {
   visible: boolean;
@@ -14,14 +17,22 @@ export const SettingsModal = ({
   onCancel,
 }: SettingsModalProps) => {
   const [language, setLanguage] = useState("en");
-  const [theme, setTheme] = useState("light");
+  const [currentTheme, , toggleTheme] = useTheme();
+
+  const changeDirWithLanguage = useTextDirection();
+
+  const handleThemeChange = (value: string) => {
+    if (value === "dark" && currentTheme === "light") {
+      toggleTheme();
+    } else if (value === "light" && currentTheme === "dark") {
+      toggleTheme();
+    }
+  };
 
   const handleLanguageChange = (value: string) => {
     setLanguage(value);
-  };
-
-  const handleThemeChange = (value: string) => {
-    setTheme(value);
+    changeLanguage(value);
+    changeDirWithLanguage(value);
   };
 
   return (
@@ -40,7 +51,7 @@ export const SettingsModal = ({
           onChange={handleLanguageChange}
         >
           <Select.Option value="en">English</Select.Option>
-          <Select.Option value="he">Hebrew</Select.Option>
+          <Select.Option value="he">עברית</Select.Option>
         </Select>
       </div>
 
@@ -48,7 +59,7 @@ export const SettingsModal = ({
         <label>Theme:</label>
         <Select
           className="settings-select"
-          value={theme}
+          value={currentTheme}
           onChange={handleThemeChange}
         >
           <Select.Option value="light">Light</Select.Option>
