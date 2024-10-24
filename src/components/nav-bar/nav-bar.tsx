@@ -7,9 +7,7 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
-import { ThemeSwitcher } from "../theme-switcher";
 import "./nav-bar.css";
-import { TranslationSwitcher } from "../translation";
 import { useTranslation } from "react-i18next";
 import { SettingsModal } from "../modals/settings-modal";
 import { useState } from "react";
@@ -50,8 +48,7 @@ export const NavBar = () => {
           <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
           <span className="app-name">{t("app-name")}</span>
         </div>
-        <ThemeSwitcher />
-        <TranslationSwitcher />
+     
         <div className="right-nav">
           <div className="connection-wrapper">
             <ConnectionHealth />
