@@ -142,6 +142,7 @@ export const Notification = () => (
         return (
           <div className="notification-item" key={id}>
             <NotificationInvitation
+              id={id}
               avatarSrc={avatarSrc}
               listName={listName}
               responses={responses}
