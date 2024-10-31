@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Avatar, Dropdown } from "antd";
 import {
   UserOutlined,
@@ -8,12 +10,9 @@ import {
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
 import { ThemeSwitcher } from "../theme-switcher";
-import "./nav-bar.css";
 import { TranslationSwitcher } from "../translation";
-import { useTranslation } from "react-i18next";
 import { SettingsModal } from "../modals/settings-modal";
-import { useState } from "react";
-import { is } from "date-fns/locale";
+import "./nav-bar.css";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
