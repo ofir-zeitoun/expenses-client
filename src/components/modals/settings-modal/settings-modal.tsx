@@ -1,7 +1,7 @@
 import { Modal } from "antd";
-import "./settings-modal.css";
 import { ThemeSwitcher } from "../../theme-switcher";
 import { TranslationSwitcher } from "../../translation";
+import "./settings-modal.css";
 
 type SettingsModalProps = {
   visible: boolean;

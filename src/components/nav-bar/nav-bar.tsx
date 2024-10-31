@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Avatar, Dropdown } from "antd";
 import {
   UserOutlined,
@@ -7,10 +9,8 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
-import "./nav-bar.css";
-import { useTranslation } from "react-i18next";
 import { SettingsModal } from "../modals/settings-modal";
-import { useState } from "react";
+import "./nav-bar.css";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();

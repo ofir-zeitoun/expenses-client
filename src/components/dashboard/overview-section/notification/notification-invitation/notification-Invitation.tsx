@@ -1,13 +1,13 @@
 import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import { UserPicture } from "../../../../shared";
-import { InvitationNotificationProps } from "../../../../../@types/notification";
+import { NotificationInvitationProps } from "../../../../../@types/notification";
 import "./notification-Invitation.css";
 
 export function NotificationInvitation({
   avatarSrc,
   listName,
   responses,
-}: InvitationNotificationProps) {
+}: NotificationInvitationProps) {
   return (
     <div className="notification-invitation">
       <UserPicture creatorImageUrl={avatarSrc} />
