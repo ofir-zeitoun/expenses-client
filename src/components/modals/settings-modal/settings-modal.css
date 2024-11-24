@@ -1,5 +1,8 @@
 .settings-option {
   margin-bottom: 16px;
+  justify-content: space-between;
+  display: flex;
+  gap: 8px;
 }
 
 .settings-option label {
@@ -10,3 +13,8 @@
 .settings-select {
   width: 100%;
 }
+
+.ant-modal-title, .ant-modal-close-icon {
+  color: var(--text-primary) !important;
+}
+

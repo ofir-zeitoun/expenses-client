@@ -9,8 +9,6 @@ import {
 } from "@ant-design/icons";
 import { useAuth0 } from "@auth0/auth0-react";
 import { ConnectionHealth } from "../connection-health";
-import { ThemeSwitcher } from "../theme-switcher";
-import { TranslationSwitcher } from "../translation";
 import { SettingsModal } from "../modals/settings-modal";
 import "./nav-bar.css";
 
@@ -29,7 +27,6 @@ export const NavBar = () => {
       icon: <SettingOutlined />,
       label: t("settings"),
       onClick: () => {
-        console.log("settings clicked");
         setIsSettingSelected(true);
       },
     },
@@ -50,8 +47,7 @@ export const NavBar = () => {
           <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
           <span className="app-name">{t("app-name")}</span>
         </div>
-        <ThemeSwitcher />
-        <TranslationSwitcher />
+
         <div className="right-nav">
           <div className="connection-wrapper">
             <ConnectionHealth />
@@ -101,7 +97,6 @@ export const NavBar = () => {
       </div>
       {isSettingSelected && (
         <SettingsModal
-          onOk={() => setIsSettingSelected(false)}
           onCancel={() => setIsSettingSelected(false)}
           visible={isSettingSelected}
         />

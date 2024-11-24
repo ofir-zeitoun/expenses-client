@@ -9,7 +9,7 @@ export const ThemeSwitcher = () => {
   return (
     <div className="btn-container">
       <Switch
-        checked={currentTheme === "dark"}
+        checked={currentTheme === "light"}
         onChange={toggleTheme}
         checkedChildren={<SunOutlined />}
         unCheckedChildren={<MoonOutlined />}

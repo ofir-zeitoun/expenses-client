@@ -1,59 +1,43 @@
-import { Modal, Select } from "antd";
-import { useState } from "react";
+import { Modal } from "antd";
+import { ThemeSwitcher } from "../../theme-switcher";
+import { TranslationSwitcher } from "../../translation";
 import "./settings-modal.css";
 
 type SettingsModalProps = {
   visible: boolean;
-  onOk: () => void;
   onCancel: () => void;
 };
 
-export const SettingsModal = ({
-  visible,
-  onOk,
-  onCancel,
-}: SettingsModalProps) => {
-  const [language, setLanguage] = useState("en");
-  const [theme, setTheme] = useState("light");
-
-  const handleLanguageChange = (value: string) => {
-    setLanguage(value);
-  };
-
-  const handleThemeChange = (value: string) => {
-    setTheme(value);
-  };
-
+export const SettingsModal = ({ visible, onCancel }: SettingsModalProps) => {
   return (
     <Modal
+      styles={{
+        content: {
+          backgroundColor: "var(--background-color)",
+          color: "var(--text-primary)",
+        },
+        header: {
+          backgroundColor: "var(--background-color)",
+          color: "var(--text-primary)",
+        },
+      }}
+      width={250}
       title="Settings"
       open={visible}
-      onOk={onOk}
       onCancel={onCancel}
-      maskClosable={false}
+      maskClosable={true}
+      okButtonProps={{ style: { display: "none" } }}
+      cancelButtonProps={{ style: { display: "none" } }}
     >
       <div className="settings-option">
         <label>Language:</label>
-        <Select
-          className="settings-select"
-          value={language}
-          onChange={handleLanguageChange}
-        >
-          <Select.Option value="en">English</Select.Option>
-          <Select.Option value="he">Hebrew</Select.Option>
-        </Select>
+
+        <TranslationSwitcher />
       </div>
 
       <div className="settings-option">
         <label>Theme:</label>
-        <Select
-          className="settings-select"
-          value={theme}
-          onChange={handleThemeChange}
-        >
-          <Select.Option value="light">Light</Select.Option>
-          <Select.Option value="dark">Dark</Select.Option>
-        </Select>
+        <ThemeSwitcher />
       </div>
     </Modal>
   );
