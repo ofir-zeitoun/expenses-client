@@ -5,24 +5,29 @@ import "./settings-modal.css";
 
 type SettingsModalProps = {
   visible: boolean;
-  onOk: () => void;
   onCancel: () => void;
 };
 
-export const SettingsModal = ({
-  visible,
-  onOk,
-  onCancel,
-}: SettingsModalProps) => {
- 
+export const SettingsModal = ({ visible, onCancel }: SettingsModalProps) => {
   return (
     <Modal
+      styles={{
+        content: {
+          backgroundColor: "var(--background-color)",
+          color: "var(--text-primary)",
+        },
+        header: {
+          backgroundColor: "var(--background-color)",
+          color: "var(--text-primary)",
+        },
+      }}
       width={250}
       title="Settings"
       open={visible}
-      onOk={onOk}
       onCancel={onCancel}
       maskClosable={true}
+      okButtonProps={{ style: { display: "none" } }}
+      cancelButtonProps={{ style: { display: "none" } }}
     >
       <div className="settings-option">
         <label>Language:</label>

@@ -27,7 +27,6 @@ export const NavBar = () => {
       icon: <SettingOutlined />,
       label: t("settings"),
       onClick: () => {
-        console.log("settings clicked");
         setIsSettingSelected(true);
       },
     },
@@ -48,7 +47,7 @@ export const NavBar = () => {
           <img src="/src/assets/oz-mern.png" alt="Logo" className="logo" />
           <span className="app-name">{t("app-name")}</span>
         </div>
-     
+
         <div className="right-nav">
           <div className="connection-wrapper">
             <ConnectionHealth />
@@ -98,7 +97,6 @@ export const NavBar = () => {
       </div>
       {isSettingSelected && (
         <SettingsModal
-          onOk={() => setIsSettingSelected(false)}
           onCancel={() => setIsSettingSelected(false)}
           visible={isSettingSelected}
         />

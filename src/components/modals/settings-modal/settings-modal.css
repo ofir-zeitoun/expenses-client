@@ -6,7 +6,6 @@
 }
 
 .settings-option label {
-  color: black;
   margin-right: 8px;
   font-weight: bold;
 }
@@ -14,3 +13,8 @@
 .settings-select {
   width: 100%;
 }
+
+.ant-modal-title, .ant-modal-close-icon {
+  color: var(--text-primary) !important;
+}
+
