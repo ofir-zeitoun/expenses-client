@@ -24,7 +24,7 @@ export const SettingsModal = ({ visible, onCancel }: SettingsModalProps) => {
         },
       }}
       width={250}
-      title="Settings"
+      title={t(`settings`)}
       open={visible}
       onCancel={onCancel}
       maskClosable={true}
