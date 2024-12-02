@@ -4,6 +4,8 @@
     "logout": "Log Out",
     "app-name": "Expenses Dashboard",
     "login": "Log In",
+    "language": "Language",
+    "theme": "Theme",
     
     "server-connected": "Server Connected",
     "server-disconnected": "Server Disconnected"

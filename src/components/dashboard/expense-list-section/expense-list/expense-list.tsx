@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ExpenseLIstType } from "../../../../@types/expense-list-prop";
 import AddExpenseItem from "./add-expense-item/add-expense-item";
 import { ExpenseItem } from "./expense-item";
