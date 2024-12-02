@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useTranslation as useI18n } from "react-i18next";
 import { LanguageOption } from "./language-option";
 
@@ -14,16 +14,16 @@ export const useTranslation = () => {
     [i18nLanguage]
   );
 
+  
+
   const changeLanguage = useCallback(
     (language: string) => {
       i18n.changeLanguage(language);
+      document.body.dir = i18n.dir(language);
     },
     [i18n]
   );
 
-  useEffect(() => {
-    console.log("i18n-direction", i18n.dir());
-  }, [currentLanguage, i18n]);
 
   return { t, currentLanguage, changeLanguage };
 };

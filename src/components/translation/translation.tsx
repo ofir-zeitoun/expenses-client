@@ -25,7 +25,7 @@ export const TranslationSwitcher = () => {
         },
       };
     });
-  }, [changeDirWithLanguage]);
+  }, [changeDirWithLanguage, changeLanguage]);
 
   return (
     <div className="translation">
