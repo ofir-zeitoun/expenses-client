@@ -1,10 +1,10 @@
 import { Switch } from "antd";
 import { SunOutlined, MoonOutlined } from "@ant-design/icons";
-import { useTheme } from "../utilities/useTheme";
 import "./theme-switcher.css";
+import { useTheme } from "../utilities/useTheme";
 
 export const ThemeSwitcher = () => {
-  const { currentTheme, toggleTheme } = useTheme();
+  const [currentTheme, , toggleTheme] = useTheme();
 
   return (
     <div className="btn-container">

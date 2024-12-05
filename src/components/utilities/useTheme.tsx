@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type ThemeMode = "dark" | "light";
 
-export const useTheme = () => {
+export const useTheme = (): [ThemeMode, (newTheme: ThemeMode) => void , ()=>void] => {
     const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem("currentTheme") as ThemeMode || (isSystemDark ? "dark" : "light");
     const [currentTheme, setCurrentTheme] = useState<ThemeMode>(savedTheme);
@@ -11,15 +11,13 @@ export const useTheme = () => {
         document.documentElement.setAttribute("data-theme", currentTheme);
     }, [currentTheme]);
 
-    const handleSetTheme = useCallback(
-        (newTheme: ThemeMode) => {
-            setCurrentTheme(newTheme);
-            localStorage.setItem("currentTheme", newTheme);
-        }, []);
+    const handleSetTheme = (newTheme: ThemeMode) => {
+        setCurrentTheme(newTheme);
+        localStorage.setItem("currentTheme", newTheme);
+    };
 
-    const toggleTheme = useCallback(() => {
+    const toggleTheme = () =>{
         handleSetTheme(currentTheme === 'dark' ? 'light' : 'dark');
-    }, []);
-    
-    return { currentTheme, handleSetTheme, toggleTheme };
+    }
+    return [currentTheme, handleSetTheme,toggleTheme];
 };
