@@ -19,7 +19,7 @@ export const useTheme = () => {
 
     const toggleTheme = useCallback(() => {
         handleSetTheme(currentTheme === 'dark' ? 'light' : 'dark');
-    }, []);
+    }, [currentTheme]);
     
     return { currentTheme, handleSetTheme, toggleTheme };
 };
