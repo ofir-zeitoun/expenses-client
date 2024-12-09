@@ -1,17 +1,17 @@
 [data-theme="light"] {
   /* general  */
   --primary-color: #007bff;
-  --secondary-color: none;
-  --accent-color: none;
+  --secondary-color: #456085;
+  --accent-color: #F5C451;
   --background-color: #FFFFFF;
-  --foreground-color: none;
-  --text-color: none;
+  --foreground-color: #191919;
+  --text-color: #191919;
   --muted-text-color: #191919B3;
-  --link-color: none;
-  --border-color: none;
-  --hover-color: none;
-  --active-color: none;
-  --disabled-color: none;
+  --link-color: #007bff;
+  --border-color: #E6EAEF;
+  --hover-color: #EDF2FC;
+  --active-color: #0056b3;
+  --disabled-color: #EBF0F7;
   --box-shadow-color: #E6EAEF;
 
   /* texts */
@@ -19,45 +19,45 @@
   --text-secondary: #456085;
   --text-muted: #191919B3;
   --text-on-primary: #FFFFFF;
-  --text-on-secondary: none;
+  --text-on-secondary: #191919;
   --text-on-background: #191919;
   --text-on-disabled: #425B7B;
 
   /* background */
   --background-primary: #FFFFFF;
-  --background-secondary: none;
-  --background-muted: none;
-  --background-hover: none;
-  --background-active: none;
-  --background-disabled: none;
+  --background-secondary: #F8FAFC;
+  --background-muted: #F0F4F8;
+  --background-hover: #EDF2FC;
+  --background-active: #D9E2EF;
+  --background-disabled: #EBF0F7;
 
   /* button */
   --button-primary: #5B93FF;
-  --button-secondary: none;
-  --button-hover: none;
+  --button-secondary: #456085;
+  --button-hover: #457BCC;
   --button-active: #425B7B;
   --button-disabled: #EBF0F7;
   --button-text: #FFFFFF;
   --button-text-disabled: #425B7B;
 
   /* list */
-  --list-header-background: none;
-  --list-row-background: none;
-  --list-row-hover: none;
-  --list-row-active: none;
+  --list-header-background: #F8FAFC;
+  --list-row-background: #FFFFFF;
+  --list-row-hover: #F0F4F8;
+  --list-row-active: #E6EAEF;
   --list-row-odd-background: #EDF2FC80;
-  --list-row-even-background: none;
-  --list-border-color: none;
+  --list-row-even-background: #F8FAFC;
+  --list-border-color: #E6EAEF;
   --list-text-primary: #191919;
   --list-text-secondary: #456085;
 
   /* icons */
   --icon-primary: #F5C451;
   --icon-secondary: #191919;
-  --icon-muted: #191919;
-  --icon-muted-secondary: #667182;
-  --icon-hover: none;
-  --icon-active: none;
+  --icon-muted: #667182;
+  --icon-muted-secondary: #AAB4C4;
+  --icon-hover: #F5C45180;
+  --icon-active: #F5C451;
   --icon-background-primary: #FFD66B33;
   --icon-background-secondary: #A5D2B3;
   --icon-background-muted: #86868666;

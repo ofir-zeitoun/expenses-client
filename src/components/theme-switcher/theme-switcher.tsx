@@ -1,7 +1,7 @@
 import { Switch } from "antd";
 import { SunOutlined, MoonOutlined } from "@ant-design/icons";
-import { useTheme } from "../utilities/useTheme";
 import "./theme-switcher.css";
+import { useTheme } from "../utilities";
 
 export const ThemeSwitcher = () => {
   const { currentTheme, toggleTheme } = useTheme();

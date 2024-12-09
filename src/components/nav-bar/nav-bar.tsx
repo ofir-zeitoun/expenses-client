@@ -1,4 +1,4 @@
-import { Avatar, Dropdown } from "antd";
+import { Avatar } from "antd";
 import {
   UserOutlined,
   SettingOutlined,
@@ -11,10 +11,11 @@ import { ThemeSwitcher } from "../theme-switcher";
 import "./nav-bar.css";
 import { TranslationSwitcher } from "../translation";
 import { useTranslation } from "react-i18next";
+import { Dropdown } from "../shared/dropdown";
 
 export const NavBar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
-  const {t} = useTranslation();
+  const { t } = useTranslation();
   const items = [
     {
       key: "profile",
@@ -29,7 +30,7 @@ export const NavBar = () => {
     {
       key: "logout",
       icon: <LogoutOutlined />,
-      label:t("logout"),
+      label: t("logout"),
       className: "menu-logout",
       onClick: () =>
         logout({ logoutParams: { returnTo: window.location.origin } }),
@@ -43,7 +44,7 @@ export const NavBar = () => {
         <span className="app-name">{t("app-name")}</span>
       </div>
       <ThemeSwitcher />
-      <TranslationSwitcher/>
+      <TranslationSwitcher />
       <div className="right-nav">
         <div className="connection-wrapper">
           <ConnectionHealth />
@@ -60,19 +61,22 @@ export const NavBar = () => {
               </div>
               <div className="user-name">{user?.name || "Unknown"}</div>
               <div className="user-menu">
+
+
                 <Dropdown
-                  menu={{ items }}
-                  placement="bottomRight"
-                  trigger={["click"]}
+                  items={items}
+                  onChange={() => { }}
+                  placement="left"
                 >
                   <MoreOutlined />
+
                 </Dropdown>
               </div>
             </>
           ) : (
             <>
               <span className="user-login" onClick={() => loginWithRedirect()}>
-              {t("login")}
+                {t("login")}
               </span>
             </>
           )}

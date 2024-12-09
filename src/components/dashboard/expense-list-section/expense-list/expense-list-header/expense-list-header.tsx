@@ -1,4 +1,3 @@
-import { Dropdown } from "antd";
 import {
   UserOutlined,
   SettingOutlined,
@@ -6,6 +5,7 @@ import {
   MoreOutlined,
 } from "@ant-design/icons";
 import "./expense-list-header.css";
+import { Dropdown } from "../../../../shared/dropdown";
 
 export const ExpenseListHeader = ({
   listName,
@@ -44,9 +44,9 @@ export const ExpenseListHeader = ({
         <div className="total-price">{expenseTotal + "$" || "0"}</div>
         <div className="list-options-icon">
           <Dropdown
-            menu={{ items }}
-            placement="bottomRight"
-            trigger={["click"]}
+            items={items}
+            placement="left"
+            onChange={() => { }}
           >
             <MoreOutlined />
           </Dropdown>
