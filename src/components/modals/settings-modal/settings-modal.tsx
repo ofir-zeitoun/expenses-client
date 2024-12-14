@@ -2,7 +2,7 @@ import { Modal } from "antd";
 import { ThemeSwitcher } from "../../theme-switcher";
 import { TranslationSwitcher } from "../../translation";
 import "./settings-modal.css";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "../../translation/use-translation";
 
 type SettingsModalProps = {
   visible: boolean;
