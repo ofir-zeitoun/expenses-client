@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { Dashboard, NavBar } from "./components";
 import { QueryWrapper, useTheme } from "./components/utilities";
+import { Dashboard, NavBar } from "./components";
 import "./App.css";
 
 function App() {

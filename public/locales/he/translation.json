@@ -4,6 +4,8 @@
     "logout": "התנתק",
     "app-name": "ניהול הוצאות",
     "login": "התחברות",
+    "language": "שפה",
+    "theme": "ערכת נושא",
     
     "server-connected": "השרת מחובר",
     "server-disconnected": "השרת לא מחובר"
